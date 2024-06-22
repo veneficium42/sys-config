@@ -24,7 +24,6 @@
       ipod.enable = lib.mkDefault false;
 
       gpu = {
-        #opengl.enable = lib.mkDefault true;
         nvidia.enable = lib.mkDefault false;
         nvidia.forceDisable = lib.mkDefault true;
         amd.enable = lib.mkDefault false;
