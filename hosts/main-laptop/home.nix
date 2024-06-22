@@ -22,7 +22,6 @@
     prismlauncher
     foliate
     rustup
-    logseq
     python3
     impression
     chatterino2
