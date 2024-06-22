@@ -1,4 +1,3 @@
-#todo declare options to more easily activate the right modules then use those to import the correct modules in the hosts configs
 { lib, ... }: {
   imports =
     [
@@ -15,7 +14,7 @@
       ./services/printing.nix
       ./programs/docker.nix
       ./programs/tailscale.nix
-  ];
+    ];
 
   settings = {
     programs.docker.enable = lib.mkDefault false;
