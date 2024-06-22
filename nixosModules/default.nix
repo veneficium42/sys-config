@@ -4,7 +4,6 @@
       ./fedfer.nix
       ./drivers/samsung-printer.nix
       ./drivers/ipod.nix
-      ./drivers/gpu/opengl.nix
       ./drivers/gpu/amd.nix
       ./drivers/gpu/nvidia.nix
       ./drivers/gpu/disableNvidia.nix
@@ -25,7 +24,7 @@
       ipod.enable = lib.mkDefault false;
 
       gpu = {
-        opengl.enable = lib.mkDefault true;
+        #opengl.enable = lib.mkDefault true;
         nvidia.enable = lib.mkDefault false;
         nvidia.forceDisable = lib.mkDefault true;
         amd.enable = lib.mkDefault false;

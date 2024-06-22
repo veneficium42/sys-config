@@ -6,7 +6,6 @@
   config = lib.mkIf config.settings.drivers.gpu.opengl.enable {
     hardware.opengl = {
 			enable = true;
-			driSupport = true;
 			driSupport32Bit = true;
     };
   };
