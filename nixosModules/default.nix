@@ -46,6 +46,7 @@
       audio.enable = lib.mkDefault false;
       fstrim.enable = lib.mkDefault true;
       tlp.enable = lib.mkDefault false;
+      switcheroo = lib.mkDefault false;
     };
 
     gnome.enable = lib.mkDefault false;
