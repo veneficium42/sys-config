@@ -15,6 +15,7 @@
       ./services/printing.nix
       ./services/fstrim.nix
       ./services/tlp.nix
+      ./services/switcheroo.nix
 
       ./programs/docker.nix
       ./programs/tailscale.nix
