@@ -2,15 +2,20 @@
   imports =
     [
       ./fedfer.nix
+
       ./drivers/samsung-printer.nix
       ./drivers/ipod.nix
       ./drivers/gpu/amd.nix
       ./drivers/gpu/nvidia.nix
       ./drivers/gpu/disableNvidia.nix
+
       ./services/locale.nix #todo turn into config module?
       ./services/gnome.nix
       ./services/pipewire.nix
       ./services/printing.nix
+      ./services/fstrim.nix
+      ./services/tlp.nix
+
       ./programs/docker.nix
       ./programs/tailscale.nix
     ];
@@ -30,8 +35,12 @@
       };
     };
 
-    services.printing.enable = lib.mkDefault false;
-    services.audio.enable = lib.mkDefault false;
+    services = {
+      printing.enable = lib.mkDefault false;
+      audio.enable = lib.mkDefault false;
+      fstrim.enable = lib.mkDefault true;
+      tlp.enable = lib.mkDefault true;
+    };
 
     gnome.enable = lib.mkDefault false;
 

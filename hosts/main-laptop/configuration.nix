@@ -39,8 +39,6 @@
 
   #todo need to move this to modules
   services = {
-    fstrim.enable = true;
-    thermald.enable = true;
     libinput = {
         enable = true;
         touchpad = {
