@@ -4,10 +4,10 @@
     ../../homeManagerModules/zsh.nix
     ../../homeManagerModules/starship.nix
     ../../homeManagerModules/desktopPrograms/essentials/firefox.nix
-  
+
     ../../homeManagerModules/desktopPrograms/vscodium.nix
     ../../homeManagerModules/desktopPrograms/vesktop.nix
-  
+
     ../../homeManagerModules/cliPrograms/hyfetch.nix
     ../../homeManagerModules/cliPrograms/bun.nix
     ../../homeManagerModules/cliPrograms/git.nix

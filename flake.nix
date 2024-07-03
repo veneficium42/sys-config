@@ -9,35 +9,36 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+    let
 
-  pkgs = system: import nixpkgs {
-    inherit system;
-    overlays = [
-      inputs.nix-vscode-extensions.overlays.default
-    ];
-    config = {allowUnfree = true;};
-  };
-  
-  in {
-
-    nixosConfigurations = {
-
-      fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem rec {
-        system = "x86_64-linux";
-        specialArgs = { pkgs = pkgs system; };
-        modules =  [ 
-          ./hosts/main-laptop/configuration.nix 
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = false;
-            home-manager.users.fedfer = import ./hosts/main-laptop/home.nix;
-            home-manager.backupFileExtension = "backup";
-          }
+      pkgs = system: import nixpkgs {
+        inherit system;
+        overlays = [
+          inputs.nix-vscode-extensions.overlays.default
         ];
+        config = { allowUnfree = true; };
       };
 
+    in
+    {
+
+      nixosConfigurations = {
+        fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = { pkgs = (pkgs system); };
+          modules = [
+            ./hosts/main-laptop/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = false;
+              home-manager.users.fedfer = import ./hosts/main-laptop/home.nix;
+              home-manager.backupFileExtension = "backup";
+            }
+          ];
+        };
+
+      };
     };
-  };
 }

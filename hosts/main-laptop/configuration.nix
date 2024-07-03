@@ -5,7 +5,7 @@
     [
       ./hardware-configuration.nix
       ../../nixosModules/default.nix
-  ];
+    ];
 
   settings = {
     programs.docker.enable = lib.mkForce true;
@@ -49,13 +49,13 @@
   #todo need to move this to modules
   services = {
     libinput = {
-        enable = true;
-        touchpad = {
-          tapping = true;
-        };
+      enable = true;
+      touchpad = {
+        tapping = true;
       };
+    };
   };
-  
+
   #remove various bloat
   services.xserver.excludePackages = with  pkgs; [ xterm ];
 
