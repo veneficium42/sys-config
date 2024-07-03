@@ -39,7 +39,7 @@
       printing.enable = lib.mkDefault false;
       audio.enable = lib.mkDefault false;
       fstrim.enable = lib.mkDefault true;
-      tlp.enable = lib.mkDefault true;
+      tlp.enable = lib.mkDefault false;
     };
 
     gnome.enable = lib.mkDefault false;
