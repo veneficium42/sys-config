@@ -31,8 +31,12 @@
       ipod.enable = lib.mkDefault false;
 
       gpu = {
-        nvidia.enable = lib.mkDefault false;
-        nvidia.forceDisable = lib.mkDefault true;
+        nvidia = {
+          enable = lib.mkDefault false;
+          forceDisable = lib.mkDefault true;
+          sync = lib.mkDefault false;
+          offload = lib.mkDefault true;
+        };
         amd.enable = lib.mkDefault false;
       };
     };
