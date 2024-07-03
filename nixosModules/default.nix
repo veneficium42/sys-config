@@ -18,11 +18,13 @@
 
       ./programs/docker.nix
       ./programs/tailscale.nix
+      ./programs/powertop.nix
     ];
 
   settings = {
     programs.docker.enable = lib.mkDefault false;
     programs.tailscale.enable = lib.mkDefault false;
+    programs.powertop.enable = lib.mkDefault true;
 
     drivers = {
       printer.M2020.enable = lib.mkDefault false;
