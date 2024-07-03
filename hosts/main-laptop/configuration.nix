@@ -27,7 +27,7 @@
       settings.drivers.gpu.nvidia.forceDisable = lib.mkForce false;
       settings.drivers.gpu.nvidia.enable = lib.mkForce true;
       settings.services.switcheroo.enable = lib.mkForce true;
-      environment.systemPackages = with pkgs; [ blender ];
+      environment.systemPackages = with pkgs; [ blender.override { cudaSupport = true; } ];
     };
   };
 
