@@ -25,7 +25,7 @@
   specialisation = {
     nvidia.configuration = {
       settings.drivers.gpu.nvidia.forceDisable = lib.mkForce false;
-      settings.drivers.gpu.nvidia.enable = lib.mkForce false;
+      settings.drivers.gpu.nvidia.enable = lib.mkForce true;
       settings.services.switcheroo.enable = lib.mkForce true;
     };
   };
