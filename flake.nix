@@ -1,7 +1,5 @@
 {
-  #need to put something funny in here
-  #this one is so boring :/
-  description = "fedfer nix flake config";
+  description = "Veneficium's amazing fantastic mindblowingly stupid nixOS configuration! :3";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
