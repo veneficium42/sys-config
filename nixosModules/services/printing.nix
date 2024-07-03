@@ -8,7 +8,6 @@
       printing = {
         enable = true;
       };
-      #todo make this also configurable   maybe a seperate module?
       avahi = {
         enable = true;
         nssmdns4 = true;

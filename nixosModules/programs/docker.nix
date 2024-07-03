@@ -1,5 +1,4 @@
 { lib, config, ... }: {
-  #todo look further into virt options
   options = {
     settings.programs.docker.enable = lib.mkEnableOption "enables docker";
   };
