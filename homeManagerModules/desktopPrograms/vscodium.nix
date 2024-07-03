@@ -13,6 +13,7 @@
     extensions = with pkgs.vscode-extensions; [
       ms-vscode.cpptools
       ms-vscode-remote.remote-ssh
+      ms-vscode.live-server
       mhutchie.git-graph
       pkief.material-icon-theme
       pkief.material-product-icons
