@@ -22,6 +22,14 @@
     services.audio.enable = lib.mkForce true;
   };
 
+  specialisation = {
+    nvidia.configuration = {
+      settings.drivers.gpu.nvidia.forceDisable = lib.mkForce false;
+      settings.drivers.gpu.nvidia.enable = lib.mkForce false;
+      settings.services.switcheroo.enable = lib.mkForce true;
+    };
+  };
+
   #enable wayland for electron programs
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
