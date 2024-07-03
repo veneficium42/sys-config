@@ -13,24 +13,22 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
 
-  overlays = [
-    # Nix VSCode Extensions Overlay
-    inputs.nix-vscode-extensions.overlays.default
-];
-
   pkgs = system: import nixpkgs {
-    inherit system overlays;
+    inherit system;
+    overlays = [
+      inputs.nix-vscode-extensions.overlays.default
+    ];
     config = {allowUnfree = true;};
   };
-
+  
   in {
 
     nixosConfigurations = {
 
-      fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem {
+      fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
-        specialArgs = { inherit pkgs; };
-        modules = [ 
+        specialArgs = { pkgs = pkgs system; };
+        modules =  [ 
           ./hosts/main-laptop/configuration.nix 
           home-manager.nixosModules.home-manager
           {
