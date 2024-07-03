@@ -28,6 +28,7 @@
     qbittorrent
     nil
     fira-code-nerdfont
+    powertop
   ];
 
   nixpkgs.config.allowUnfree = true;
