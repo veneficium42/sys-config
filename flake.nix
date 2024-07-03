@@ -11,12 +11,25 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
+
+  overlays = [
+    # Nix VSCode Extensions Overlay
+    inputs.nix-vscode-extensions.overlays.default
+];
+
+  pkgs = system: import nixpkgs {
+    inherit system overlays;
+    config = {allowUnfree = true;};
+  };
+
+  in {
 
     nixosConfigurations = {
 
       fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit pkgs; };
         modules = [ 
           ./hosts/main-laptop/configuration.nix 
           home-manager.nixosModules.home-manager
