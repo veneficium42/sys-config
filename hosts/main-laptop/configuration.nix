@@ -7,6 +7,8 @@
       ../../nixosModules/default.nix
     ];
 
+  #todo gnupg
+
   settings = {
     programs.docker.enable = lib.mkForce true;
     programs.tailscale.enable = lib.mkForce true;
