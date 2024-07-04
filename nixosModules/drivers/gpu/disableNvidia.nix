@@ -5,6 +5,7 @@
   };
 
   config = lib.mkIf config.settings.drivers.gpu.nvidia.forceDisable {
+    hardware.nvidiaOptimus.disable = true;
     boot.extraModprobeConfig = ''
       blacklist nouveau
       options nouveau modeset=0
