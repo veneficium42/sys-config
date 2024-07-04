@@ -21,7 +21,8 @@
   home.packages = with pkgs; [
     prismlauncher
     foliate
-    rustup
+    rustc
+    cargo
     python3
     impression
     chatterino2
