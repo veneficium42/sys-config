@@ -10,6 +10,7 @@
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia = {
       modesetting.enable = true;
+      powerManagement.enable = true;
       prime = {
         nvidiaBusId = "pci:1:0:0";
         amdgpuBusId = "pci:5:0:0";
