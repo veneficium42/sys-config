@@ -4,7 +4,6 @@
   };
 
   config = lib.mkIf config.settings.services.audio.enable {
-    sound.enable = true;
 
     #enable RealtimeKit for realtime audio ( req by PulseAudio )
     security.rtkit.enable = true;

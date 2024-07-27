@@ -11,7 +11,7 @@
       desktopManager.gnome.enable = true;
     };
 
-    environment.systemPackages = [ pkgs.gnome.gnome-tweaks ];
+    environment.systemPackages = [ pkgs.gnome-tweaks ];
 
     #enable browser connector for installing extensions
     services.gnome.gnome-browser-connector.enable = true;
@@ -21,6 +21,6 @@
     hardware.pulseaudio.enable = false;
 
     # remove various bloat
-    environment.gnome.excludePackages = with pkgs.gnome; [ epiphany gnome-contacts gnome-maps gnome-music gnome-weather totem yelp pkgs.gnome-tour ];
+    environment.gnome.excludePackages = with pkgs.gnome; [ gnome-contacts gnome-maps gnome-music gnome-weather pkgs.totem pkgs.yelp pkgs.gnome-tour pkgs.epiphany ];
   };
 }
