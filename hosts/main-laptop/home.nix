@@ -32,6 +32,7 @@
     nil
     fira-code-nerdfont
     powertop
+    git-credential-manager
   ];
 
   nixpkgs.config.allowUnfree = true;
