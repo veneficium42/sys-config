@@ -10,9 +10,8 @@
     enableExtensionUpdateCheck = false;
     mutableExtensionsDir = false;
 
-    extensions = with pkgs.vscode-extensions; [
+    extensions = with pkgs.vscode-marketplace; [
       ms-vscode.cpptools
-      ms-vscode-remote.remote-ssh
       ms-vscode.live-server
       mhutchie.git-graph
       pkief.material-icon-theme
@@ -22,7 +21,9 @@
       bierner.emojisense
       jnoortheen.nix-ide
       rust-lang.rust-analyzer
-    ];
+    ] ++ (with pkgs.open-vsx; [
+      jeanp413.open-remote-ssh
+  ]);
 
     userSettings = {
       "workbench.iconTheme" = "material-icon-theme";
