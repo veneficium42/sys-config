@@ -22,6 +22,7 @@
     prismlauncher
     foliate
     rustc
+    rustfmt
     biome
     cargo
     python3
