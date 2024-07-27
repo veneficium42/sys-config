@@ -22,6 +22,7 @@
     prismlauncher
     foliate
     rustc
+    biome
     cargo
     python3
     impression
