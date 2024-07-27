@@ -21,6 +21,8 @@
       bierner.emojisense
       jnoortheen.nix-ide
       rust-lang.rust-analyzer
+      biomejs.biome
+      antfu.unocss
     ] ++ (with pkgs.open-vsx; [
       jeanp413.open-remote-ssh
   ]);
