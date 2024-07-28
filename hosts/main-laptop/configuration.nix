@@ -8,6 +8,10 @@
     ];
 
   #todo gnupg
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   settings = {
     programs.docker.enable = lib.mkForce true;
