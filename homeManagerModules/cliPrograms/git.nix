@@ -5,6 +5,7 @@
     userName = "Veneficium";
     extraConfig = {
       init.defaultBranch = "main";
+      credential.credentialStore = "gpg";
     };
   };
 }
