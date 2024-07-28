@@ -33,6 +33,7 @@
     fira-code-nerdfont
     powertop
     git-credential-manager
+    pass-wayland
   ];
 
   nixpkgs.config.allowUnfree = true;
