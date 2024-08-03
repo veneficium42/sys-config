@@ -25,10 +25,33 @@
 
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  services.openssh = {
+  enable = true;
+  ports = [ 12342 ];
+  settings = {
+    PasswordAuthentication = true;
+    AllowUsers = null;
+    UsePAM = true;
+    X11Forwarding = false;
+    PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
+    };
+  };
+
+  security.pam = {
+    services.sshd = {
+      name = "sshd";
+      googleAuthenticator.enable = true;
+      gnupg.enable = true;
+    };
+  };
+
+  services.endlessh-go = {
+    enable = true;
+    port = 22;
+  };
+
   time.timeZone = "Europe/Rome";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -43,14 +66,12 @@
     LC_TIME = "it_IT.UTF-8";
   };
 
-  # Configure keymap in X11
   services.xserver.xkb = {
     layout = "it";
     variant = "";
   };
 
-  # Configure console keymap
-  console.keyMap = "it2";
+  console.keyMap = "it";
 
   environment.systemPackages = with pkgs; [
     nano
@@ -71,8 +92,6 @@
 
 
   programs.zsh.enable = true;
-
-  services.openssh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
