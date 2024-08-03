@@ -11,7 +11,12 @@
     installPath = "$HOME/.vscodium-server";
   };
   programs.nix-ld.enable = true;
-
+  
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+  
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -52,6 +57,9 @@
     lshw
     neofetch
     parted
+    git-credential-manager
+    pass-wayland
+    git
   ];
 
   users.users.veneficium = {
