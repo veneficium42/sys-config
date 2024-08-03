@@ -40,6 +40,7 @@
   security.pam = {
     services.sshd = {
       name = "sshd";
+      unixAuth  = true;
       googleAuthenticator.enable = true;
       gnupg.enable = true;
     };
@@ -81,6 +82,7 @@
     git-credential-manager
     pass-wayland
     git
+    google-authenticator
   ];
 
   users.users.veneficium = {
