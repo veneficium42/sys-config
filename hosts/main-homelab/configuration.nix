@@ -46,11 +46,6 @@
     };
   };
 
-  services.endlessh-go = {
-    enable = true;
-    port = 22;
-  };
-
   time.timeZone = "Europe/Rome";
 
   i18n.defaultLocale = "en_US.UTF-8";
