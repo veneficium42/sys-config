@@ -4,13 +4,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-
-  services.vscode-server = {
-    enable = true;
-    enableFHS = true;
-    installPath = "$HOME/.vscodium-server";
-  };
-  programs.nix-ld.enable = true;
   
   programs.gnupg.agent = {
     enable = true;
