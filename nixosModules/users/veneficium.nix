@@ -3,9 +3,11 @@
     users.veneficium.enable = lib.mkEnableOption "enables user Veneficium";
   };
 
-  users.users.veneficium = lib.mkIf config.settings.users.veneficium.enable {
-    isNormalUser = true;
-    description = "Veneficium";
-    extraGroups = [ "networkmanager" "wheel" ];
+  config = lib.mkIf config.settings.users.veneficium.enable {
+    users.users.veneficium = {
+      isNormalUser = true;
+      description = "Veneficium";
+      extraGroups = [ "networkmanager" "wheel" ];
+    };
   };
 }

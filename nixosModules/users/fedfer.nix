@@ -4,10 +4,12 @@
     users.fedfer.enable = lib.mkEnableOption "enables user FedFer";
   };
 
-  users.users.fedfer = lib.mkIf config.settings.users.fedfer.enable {
-    isNormalUser = true;
-    description = "FedFer";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
+  config = lib.mkIf config.settings.users.fedfer.enable {
+    users.users.fedfer = {
+      isNormalUser = true;
+      description = "FedFer";
+      extraGroups = [ "networkmanager" "wheel" ];
+      shell = pkgs.zsh;
+    };
   };
 }

@@ -4,8 +4,10 @@
     programs.gnupg.ssh = lib.mkEnableOption "enable gnuPG ssh integration";
   };
 
-  programs.gnupg.agent = lib.mkIf config.settings.programs.gnupg.enable {
-    enable = true;
-    enableSSHSupport = config.settings.programs.gnupg.ssh;
+  config = lib.mkIf config.settings.programs.gnupg.enable {
+    programs.gnupg.agent = {
+      enable = true;
+      enableSSHSupport = config.settings.programs.gnupg.ssh;
+    };
   };
 }

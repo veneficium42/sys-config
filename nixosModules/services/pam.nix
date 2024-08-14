@@ -5,12 +5,14 @@
     services.pam.sshd.gnupg = lib.mkEnableOption "enable gnuPG integration";
   };
 
-  security.pam = lib.mkIf config.settings.services.pam.enable {
-    services.sshd = {
-      name = "sshd";
-      unixAuth  = true;
-      googleAuthenticator.enable = config.settings.services.pam.sshd.useGoogleAuth;
-      gnupg.enable = config.settings.services.pam.sshd.gnupg;
+  config = lib.mkIf config.settings.services.pam.enable {
+    security.pam = {
+      services.sshd = {
+        name = "sshd";
+        unixAuth  = true;
+        googleAuthenticator.enable = config.settings.services.pam.sshd.useGoogleAuth;
+        gnupg.enable = config.settings.services.pam.sshd.gnupg;
+      };
     };
   };
 }
