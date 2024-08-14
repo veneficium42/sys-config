@@ -7,15 +7,13 @@
       ../../nixosModules/default.nix
     ];
 
-  #todo gnupg
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
   settings = {
+    users.fedfer.enable = lib.mkForce true;
+
     programs.docker.enable = lib.mkForce true;
     programs.tailscale.enable = lib.mkForce true;
+    programs.gnupg.enable = lib.mkForce true;
+    programs.gnupg.ssh = lib.mkForce true;
 
     drivers = {
       printer.M2020.enable = lib.mkForce true;
