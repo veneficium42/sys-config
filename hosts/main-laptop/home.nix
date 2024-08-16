@@ -11,6 +11,7 @@
     ../../homeManagerModules/cliPrograms/hyfetch.nix
     ../../homeManagerModules/cliPrograms/bun.nix
     ../../homeManagerModules/cliPrograms/git.nix
+    ../../homeManagerModules/cliPrograms/pass.nix
   ];
 
   home.username = "fedfer";
@@ -33,7 +34,6 @@
     fira-code-nerdfont
     powertop
     git-credential-manager
-    pass-wayland
   ];
 
   nixpkgs.config.allowUnfree = true;
