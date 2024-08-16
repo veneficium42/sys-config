@@ -7,7 +7,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    vscode-server.url = "github:nix-community/nixos-vscode-server";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
@@ -44,7 +43,6 @@
           system = "x86_64-linux";
           specialArgs = { pkgs = (pkgs system); };
           modules = [
-            inputs.vscode-server.nixosModules.default
             ./hosts/main-homelab/configuration.nix
           ];
         };
