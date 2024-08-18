@@ -32,6 +32,7 @@
     chatterino2
     qbittorrent
     nil
+    nixd
     fira-code-nerdfont
     powertop
     git-credential-manager
