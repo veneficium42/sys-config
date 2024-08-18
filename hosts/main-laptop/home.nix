@@ -18,6 +18,7 @@
   home.homeDirectory = "/home/fedfer";
 
   xdg.enable = true;
+  home.preferXdgDirectories = true;
 
   home.packages = with pkgs; [
     prismlauncher
