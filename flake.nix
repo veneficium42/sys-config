@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -11,7 +12,6 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
     let
-
       pkgs = system: import nixpkgs {
         inherit system;
         overlays = [
@@ -19,10 +19,7 @@
         ];
         config = { allowUnfree = true; };
       };
-
-    in
-    {
-
+    in {
       nixosConfigurations = {
         fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
@@ -46,7 +43,6 @@
             ./hosts/main-homelab/configuration.nix
           ];
         };
-
       };
     };
 }
