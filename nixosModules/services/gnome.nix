@@ -17,10 +17,10 @@
     services.gnome.gnome-browser-connector.enable = true;
 
     # Gnome enables pulse by default smh
-    # make sure to have PIPEWIRE enabled!
+    # make sure to have PIPEWIRE enabled
     hardware.pulseaudio.enable = false;
 
     # remove various bloat
-    environment.gnome.excludePackages = with pkgs.gnome; [ gnome-contacts gnome-maps gnome-music gnome-weather pkgs.totem pkgs.yelp pkgs.gnome-tour pkgs.epiphany ];
+    environment.gnome.excludePackages = with pkgs; [ gnome-contacts gnome-maps gnome-music gnome-weather gnome-tour epiphany totem yelp ];
   };
 }
