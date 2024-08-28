@@ -10,7 +10,7 @@
     enableExtensionUpdateCheck = false;
     mutableExtensionsDir = false;
 
-    extensions = with pkgs.vscode-marketplace; [
+    extensions = with pkgs.vscode-extensions; [
       ms-vscode.cpptools
       ms-vscode.live-server
       mhutchie.git-graph
@@ -22,9 +22,9 @@
       jnoortheen.nix-ide
       rust-lang.rust-analyzer
       biomejs.biome
-      antfu.unocss
     ] ++ (with pkgs.open-vsx; [
       jeanp413.open-remote-ssh
+      antfu.unocss
   ]);
 
     userSettings = {
