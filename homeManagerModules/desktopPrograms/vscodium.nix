@@ -25,7 +25,7 @@
     ] ++ (with pkgs.open-vsx; [
       jeanp413.open-remote-ssh
       antfu.unocss
-  ]);
+    ]);
 
     userSettings = {
       "workbench.iconTheme" = "material-icon-theme";

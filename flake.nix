@@ -19,7 +19,8 @@
         ];
         config = { allowUnfree = true; };
       };
-    in {
+    in
+    {
       nixosConfigurations = {
         fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";

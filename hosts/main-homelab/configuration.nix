@@ -1,7 +1,8 @@
 { pkgs, lib, ... }: {
 
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../nixosModules/default.nix
     ];
@@ -22,7 +23,7 @@
       openssh.usePAM = lib.mkForce true;
     };
   };
-  
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

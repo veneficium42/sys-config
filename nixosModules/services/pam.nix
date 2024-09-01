@@ -9,7 +9,7 @@
     security.pam = {
       services.sshd = {
         name = "sshd";
-        unixAuth  = true;
+        unixAuth = true;
         googleAuthenticator.enable = config.settings.services.pam.sshd.useGoogleAuth;
         gnupg.enable = config.settings.services.pam.sshd.gnupg;
       };

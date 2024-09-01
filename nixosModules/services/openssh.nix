@@ -5,7 +5,7 @@
   };
 
 
-#further move these options into settings
+  #further move these options into settings
   config = lib.mkIf config.settings.services.openssh.enable {
     services.openssh = {
       enable = true;
