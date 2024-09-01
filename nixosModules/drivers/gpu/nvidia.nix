@@ -9,6 +9,7 @@
   config = lib.mkIf config.settings.drivers.gpu.nvidia.enable {
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia = {
+      open = false;
       modesetting.enable = true;
       powerManagement.enable = true;
       prime = {
