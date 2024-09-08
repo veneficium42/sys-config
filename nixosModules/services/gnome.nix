@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }: {
-  options = {
-    settings.gnome.enable = lib.mkEnableOption "enable gnome de";
+  options.settings.gnome = {
+    enable = lib.mkEnableOption "enable gnome de";
   };
 
   #todo make this more configurable

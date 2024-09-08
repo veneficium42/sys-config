@@ -1,6 +1,6 @@
 { config, lib, ... }: {
-  options = {
-    settings.services.printing.enable = lib.mkEnableOption "enable printing";
+  options.settings.services.printing = {
+    enable = lib.mkEnableOption "enable printing";
   };
 
   config = lib.mkIf config.settings.services.printing.enable {

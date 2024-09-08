@@ -1,9 +1,9 @@
 { lib, config, ... }: {
 
-  options = {
-    settings.drivers.gpu.nvidia.enable = lib.mkEnableOption "Enable Nvidia proprietary drivers";
-    settings.drivers.gpu.nvidia.offload = lib.mkEnableOption "Enable prime offloading";
-    settings.drivers.gpu.nvidia.sync = lib.mkEnableOption "Enable prime sync";
+  options.settings.drivers.gpu.nvidia = {
+    enable = lib.mkEnableOption "Enable Nvidia proprietary drivers";
+    offload = lib.mkEnableOption "Enable prime offloading";
+    sync = lib.mkEnableOption "Enable prime sync";
   };
 
   config = lib.mkIf config.settings.drivers.gpu.nvidia.enable {

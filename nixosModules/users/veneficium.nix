@@ -1,6 +1,6 @@
 { config, lib, ... }: {
-  options.settings = {
-    users.veneficium.enable = lib.mkEnableOption "enables user Veneficium";
+  options.settings.users.veneficium = {
+    enable = lib.mkEnableOption "enables user Veneficium";
   };
 
   config = lib.mkIf config.settings.users.veneficium.enable {

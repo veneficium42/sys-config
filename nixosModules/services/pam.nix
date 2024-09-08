@@ -1,8 +1,10 @@
 { config, lib, ... }: {
-  options.settings = {
-    services.pam.enable = lib.mkEnableOption "enables PAM";
-    services.pam.sshd.useGoogleAuth = lib.mkEnableOption "use pam_google_authenticator.so module";
-    services.pam.sshd.gnupg = lib.mkEnableOption "enable gnuPG integration";
+  options.settings.services.pam = {
+    enable = lib.mkEnableOption "enables PAM";
+    sshd = {
+      useGoogleAuth = lib.mkEnableOption "use pam_google_authenticator.so module";
+      gnupg = lib.mkEnableOption "enable gnuPG integration";
+    };
   };
 
   config = lib.mkIf config.settings.services.pam.enable {
