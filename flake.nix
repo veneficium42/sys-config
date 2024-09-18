@@ -55,5 +55,6 @@
           modules = [ ./hosts/main-homelab/configuration.nix ];
         };
       };
+      formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
     };
 }
