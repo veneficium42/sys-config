@@ -1,11 +1,11 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+{
 
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../../nixosModules/default.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../../nixosModules/default.nix
+  ];
 
   settings = {
     users.veneficium.enable = lib.mkForce true;
@@ -49,9 +49,12 @@
   nixpkgs.config.allowUnfree = true;
 
   #enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   #DO NOT CHANGE THIS! IMPORTANT! DO NOT CHANGE THIS!
-  system.stateVersion = "24.05"; #DO NOT CHANGE THIS!
+  system.stateVersion = "24.05"; # DO NOT CHANGE THIS!
 
 }

@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options.settings.services.pam = {
     enable = lib.mkEnableOption "enables PAM";
     sshd = {

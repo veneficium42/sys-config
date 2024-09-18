@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options.settings.programs.gnupg = {
     enable = lib.mkEnableOption "enable gnuPG";
     ssh = lib.mkEnableOption "enable gnuPG ssh integration";

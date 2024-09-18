@@ -1,4 +1,10 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
   options.settings.gnome = {
     enable = lib.mkEnableOption "enable gnome de";
   };
@@ -21,6 +27,15 @@
     hardware.pulseaudio.enable = false;
 
     # remove various bloat
-    environment.gnome.excludePackages = with pkgs; [ gnome-contacts gnome-maps gnome-music gnome-weather gnome-tour epiphany totem yelp ];
+    environment.gnome.excludePackages = with pkgs; [
+      gnome-contacts
+      gnome-maps
+      gnome-music
+      gnome-weather
+      gnome-tour
+      epiphany
+      totem
+      yelp
+    ];
   };
 }

@@ -1,31 +1,31 @@
-{ lib, ... }: {
-  imports =
-    [
-      ./locale.nix
+{ lib, ... }:
+{
+  imports = [
+    ./locale.nix
 
-      ./users/fedfer.nix
-      ./users/veneficium.nix
+    ./users/fedfer.nix
+    ./users/veneficium.nix
 
-      ./drivers/samsung-printer.nix
-      ./drivers/ipod.nix
-      ./drivers/gpu/amd.nix
-      ./drivers/gpu/nvidia.nix
-      ./drivers/gpu/disableNvidia.nix
+    ./drivers/samsung-printer.nix
+    ./drivers/ipod.nix
+    ./drivers/gpu/amd.nix
+    ./drivers/gpu/nvidia.nix
+    ./drivers/gpu/disableNvidia.nix
 
-      ./services/gnome.nix
-      ./services/pipewire.nix
-      ./services/printing.nix
-      ./services/fstrim.nix
-      ./services/tlp.nix
-      ./services/switcheroo.nix
-      ./services/pam.nix
-      ./services/openssh.nix
+    ./services/gnome.nix
+    ./services/pipewire.nix
+    ./services/printing.nix
+    ./services/fstrim.nix
+    ./services/tlp.nix
+    ./services/switcheroo.nix
+    ./services/pam.nix
+    ./services/openssh.nix
 
-      ./programs/docker.nix
-      ./programs/tailscale.nix
-      ./programs/powertop.nix
-      ./programs/gnupg.nix
-    ];
+    ./programs/docker.nix
+    ./programs/tailscale.nix
+    ./programs/powertop.nix
+    ./programs/gnupg.nix
+  ];
 
   settings = {
     users.fedfer.enable = lib.mkDefault false;

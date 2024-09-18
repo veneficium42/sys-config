@@ -1,4 +1,5 @@
-{ lib, config, ... }: {
+{ lib, config, ... }:
+{
 
   options.settings.drivers.gpu.nvidia = {
     enable = lib.mkEnableOption "Enable Nvidia proprietary drivers";

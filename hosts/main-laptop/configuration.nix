@@ -1,9 +1,17 @@
-{ lib, pkgs, ... }: {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ../../nixosModules/default.nix
-    ];
+{ lib, pkgs, ... }:
+{
+  imports = [
+    ./hardware-configuration.nix
+    ../../nixosModules/default.nix
+  ];
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  #required by virt-manager
+  programs.dconf.enable = true;
+
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "fedfer" ];
 
   settings = {
     users.fedfer.enable = lib.mkForce true;
@@ -59,7 +67,7 @@
   };
 
   #remove various bloat
-  services.xserver.excludePackages = with  pkgs; [ xterm ];
+  services.xserver.excludePackages = with pkgs; [ xterm ];
 
   hardware = {
     bluetooth = {
@@ -85,8 +93,11 @@
   ];
 
   #enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
-  system.stateVersion = "23.11"; #DO NOT CHANGE THIS!
+  system.stateVersion = "23.11"; # DO NOT CHANGE THIS!
 
 }

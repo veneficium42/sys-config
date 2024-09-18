@@ -1,5 +1,11 @@
 #need to move stuff to home-manager
-{ pkgs, config, lib, ... }: {
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+{
   options.settings.users.fedfer = {
     enable = lib.mkEnableOption "enables user FedFer";
   };
@@ -8,7 +14,10 @@
     users.users.fedfer = {
       isNormalUser = true;
       description = "FedFer";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
       shell = pkgs.zsh;
     };
   };

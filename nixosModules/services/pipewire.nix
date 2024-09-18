@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options.settings.services.audio = {
     enable = lib.mkEnableOption "enable sound through pipewire and its compat layers";
   };

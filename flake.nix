@@ -10,21 +10,31 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
     let
-      pkgs = system: import nixpkgs {
-        inherit system;
-        overlays = [
-          inputs.nix-vscode-extensions.overlays.default
-        ];
-        config = { allowUnfree = true; };
-      };
+      pkgs =
+        system:
+        import nixpkgs {
+          inherit system;
+          overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+          config = {
+            allowUnfree = true;
+          };
+        };
     in
     {
       nixosConfigurations = {
         fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
-          specialArgs = { pkgs = (pkgs system); };
+          specialArgs = {
+            pkgs = (pkgs system);
+          };
           modules = [
             ./hosts/main-laptop/configuration.nix
             home-manager.nixosModules.home-manager
@@ -39,10 +49,10 @@
 
         veneficium-main-homelab-nixos = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
-          specialArgs = { pkgs = (pkgs system); };
-          modules = [
-            ./hosts/main-homelab/configuration.nix
-          ];
+          specialArgs = {
+            pkgs = (pkgs system);
+          };
+          modules = [ ./hosts/main-homelab/configuration.nix ];
         };
       };
     };

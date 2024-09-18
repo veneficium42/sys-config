@@ -1,4 +1,5 @@
-{ lib, config, ... }: {
+{ lib, config, ... }:
+{
 
   options.settings.drivers.gpu.amd = {
     enable = lib.mkEnableOption "enable AMD gpu drivers";

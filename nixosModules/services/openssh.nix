@@ -1,9 +1,9 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options.settings.services.openssh = {
     enable = lib.mkEnableOption "enable openSSH";
     usePAM = lib.mkEnableOption "use PAM for ssh authentication";
   };
-
 
   #further move these options into settings
   config = lib.mkIf config.settings.services.openssh.enable {

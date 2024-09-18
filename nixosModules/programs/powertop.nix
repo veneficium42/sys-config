@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options.settings.programs.powertop = {
     enable = lib.mkEnableOption "enables powertop";
   };

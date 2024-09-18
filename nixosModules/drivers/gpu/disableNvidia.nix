@@ -1,4 +1,5 @@
-{ lib, config, ... }: {
+{ lib, config, ... }:
+{
 
   options = {
     settings.drivers.gpu.nvidia.forceDisable = lib.mkEnableOption "force disable all nvidia drivers";
@@ -20,6 +21,13 @@
       # Remove NVIDIA VGA/3D controller devices
       ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", ATTR{power/control}="auto", ATTR{remove}="1"
     '';
-    boot.blacklistedKernelModules = [ "nouveau" "nvidia" "nvidia_uvm" "nvidiafb" "nvidia_drm" "nvidia_modeset" ];
+    boot.blacklistedKernelModules = [
+      "nouveau"
+      "nvidia"
+      "nvidia_uvm"
+      "nvidiafb"
+      "nvidia_drm"
+      "nvidia_modeset"
+    ];
   };
 }

@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options.settings.users.veneficium = {
     enable = lib.mkEnableOption "enables user Veneficium";
   };
@@ -7,7 +8,10 @@
     users.users.veneficium = {
       isNormalUser = true;
       description = "Veneficium";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
     };
   };
 }

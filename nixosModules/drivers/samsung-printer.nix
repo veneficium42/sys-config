@@ -1,4 +1,10 @@
-{ lib, config, pkgs, ... }: {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   #use driver compatible with samsung M2020 printer
   options.settings.drivers.printer = {
     M2020.enable = lib.mkEnableOption "use the appropriate driver for the samsung M2020 printer";

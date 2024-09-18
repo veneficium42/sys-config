@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   #todo config
   programs.zsh = {
     enable = true;

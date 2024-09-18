@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   imports = [
     ../../homeManagerModules/zsh.nix
@@ -47,6 +48,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  home.stateVersion = "23.11"; #DO NOT CHANGE
-  programs.home-manager.enable = true; #DO NOT CHANGE
+  home.stateVersion = "23.11"; # DO NOT CHANGE
+  programs.home-manager.enable = true; # DO NOT CHANGE
 }

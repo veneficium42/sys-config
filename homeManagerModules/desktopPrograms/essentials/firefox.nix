@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   #todo config
   programs.firefox = {
     enable = true;

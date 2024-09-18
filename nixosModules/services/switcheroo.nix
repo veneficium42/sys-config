@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options.settings.services.switcheroo = {
     enable = lib.mkEnableOption "enable switcheroo-control for nvidia optimus management";
   };
