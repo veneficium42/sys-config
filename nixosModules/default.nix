@@ -1,6 +1,8 @@
 { lib, ... }: {
   imports =
     [
+      ./locale.nix
+
       ./users/fedfer.nix
       ./users/veneficium.nix
 
@@ -10,7 +12,6 @@
       ./drivers/gpu/nvidia.nix
       ./drivers/gpu/disableNvidia.nix
 
-      ./services/locale.nix #todo turn into config module?
       ./services/gnome.nix
       ./services/pipewire.nix
       ./services/printing.nix

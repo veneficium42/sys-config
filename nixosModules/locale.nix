@@ -1,8 +1,4 @@
-{ lib, ... }: {
-  /*options.settings.locale = {
-    enable = lib.mkEnableOption "enable locale config";
-    it = lib.mkEnableOption "use IT locale";
-  };*/
+{ ... }: {
 
   time.timeZone = "Europe/Rome";
 
