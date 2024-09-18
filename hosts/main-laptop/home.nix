@@ -15,8 +15,12 @@
     ../../homeManagerModules/cliPrograms/pass.nix
   ];
 
+  #todo: EditorConfig support ( https://editorconfig.org )
+
   home.username = "fedfer";
   home.homeDirectory = "/home/fedfer";
+
+  home.keyboard.layout = "it";
 
   xdg.enable = true;
   home.preferXdgDirectories = true;
