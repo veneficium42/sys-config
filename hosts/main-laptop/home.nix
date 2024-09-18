@@ -34,6 +34,8 @@
     qbittorrent
     nil
     nixd
+    nixpkgs-fmt
+    nixfmt-rfc-style
     fira-code-nerdfont
     powertop
     git-credential-manager

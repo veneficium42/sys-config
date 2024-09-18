@@ -34,6 +34,15 @@
       "workbench.sideBar.location" = "right";
       "workbench.startupEditor" = "welcomePageInEmptyWorkbench";
       "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nixd";
+      "nix.serverSettings" = {
+        "nixd" = {
+          "formatting" = {
+            "command" = [ "nixfmt" ];
+          };
+        };
+      };
+
       "C_Cpp.clang_format_fallbackStyle" = "LLVM";
       "editor.fontFamily" = "FiraCode Nerd Font Mono";
       "editor.fontLigatures" = true;
