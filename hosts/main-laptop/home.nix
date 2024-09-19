@@ -6,7 +6,7 @@
     ../../homeManagerModules/starship.nix
     ../../homeManagerModules/desktopPrograms/essentials/firefox.nix
 
-    ../../homeManagerModules/desktopPrograms/vscodium.nix
+    ../../homeManagerModules/desktopPrograms/vscodium/vscodium.nix
     ../../homeManagerModules/desktopPrograms/amberol.nix
 
     ../../homeManagerModules/cliPrograms/hyfetch.nix
