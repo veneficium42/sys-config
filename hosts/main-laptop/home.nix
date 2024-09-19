@@ -7,7 +7,6 @@
     ../../homeManagerModules/desktopPrograms/essentials/firefox.nix
 
     ../../homeManagerModules/desktopPrograms/vscodium.nix
-    ../../homeManagerModules/desktopPrograms/vesktop.nix
     ../../homeManagerModules/desktopPrograms/amberol.nix
 
     ../../homeManagerModules/cliPrograms/hyfetch.nix
@@ -44,6 +43,7 @@
     fira-code-nerdfont
     powertop
     git-credential-manager
+    vesktop
   ];
 
   nixpkgs.config.allowUnfree = true;
