@@ -12,9 +12,9 @@
 
   outputs =
     inputs@{
-      self,
       nixpkgs,
       home-manager,
+      nix-vscode-extensions,
       ...
     }:
     let
@@ -22,7 +22,7 @@
         system:
         import nixpkgs {
           inherit system;
-          overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+          overlays = [ nix-vscode-extensions.overlays.default ];
           config = {
             allowUnfree = true;
           };
