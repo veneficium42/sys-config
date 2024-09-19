@@ -4,8 +4,8 @@
   imports = [
     ../../homeManagerModules/zsh.nix
     ../../homeManagerModules/starship.nix
-    ../../homeManagerModules/desktopPrograms/essentials/firefox.nix
 
+    ../../homeManagerModules/desktopPrograms/firefox.nix
     ../../homeManagerModules/desktopPrograms/vscodium/vscodium.nix
     ../../homeManagerModules/desktopPrograms/amberol.nix
 
