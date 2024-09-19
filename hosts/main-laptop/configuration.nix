@@ -10,6 +10,8 @@
   #required by virt-manager
   programs.dconf.enable = true;
 
+  systemd.services.NetworkManager-wait-online.enable = false;
+
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "fedfer" ];
 
