@@ -9,6 +9,7 @@
     ../../homeManagerModules/desktopPrograms/vscodium/vscodium.nix
     ../../homeManagerModules/desktopPrograms/amberol.nix
 
+    ../../homeManagerModules/cliPrograms/fastfetch/fastfetch.nix
     ../../homeManagerModules/cliPrograms/hyfetch.nix
     ../../homeManagerModules/cliPrograms/bun.nix
     ../../homeManagerModules/cliPrograms/git.nix
