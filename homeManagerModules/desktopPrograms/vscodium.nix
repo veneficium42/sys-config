@@ -53,6 +53,17 @@
           "formatting" = {
             "command" = [ "nixfmt" ];
           };
+          "options" = {
+            #// By default, this entriy will be read from `import <nixpkgs> { }`
+            #// You can write arbitary nix expression here, to produce valid "options" declaration result.
+            #// Tip: for flake-based configuration, utilize `builtins.getFlake`
+            "nixos" = {
+              "expr" = "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").nixosConfigurations.fedfer-main-laptop-nixos.options";
+            };
+            "home-manager" = {
+              "expr" = "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").homeConfigurations.fedfer.options";
+            };
+          };
         };
       };
 
