@@ -6,6 +6,7 @@
     ../../homeManagerModules/starship.nix
 
     ../../homeManagerModules/desktopPrograms/firefox.nix
+    ../../homeManagerModules/desktopPrograms/wezterm/wezterm.nix
     ../../homeManagerModules/desktopPrograms/vscodium/vscodium.nix
     ../../homeManagerModules/desktopPrograms/amberol.nix
 
@@ -17,6 +18,18 @@
   ];
 
   #todo: EditorConfig support ( https://editorconfig.org )
+
+  programs.gnome-shell = {
+    enable = true;
+    extensions = [
+      { package = pkgs.gnomeExtensions.valent; }
+      { package = pkgs.gnomeExtensions.blur-my-shell; }
+      { package = pkgs.gnomeExtensions.dash-to-dock; }
+      { package = pkgs.gnomeExtensions.tray-icons-reloaded; }
+      { package = pkgs.gnomeExtensions.native-window-placement; }
+      { package = pkgs.gnomeExtensions.system-monitor; }
+    ];
+  };
 
   home.username = "fedfer";
   home.homeDirectory = "/home/fedfer";
@@ -45,6 +58,8 @@
     powertop
     git-credential-manager
     vesktop
+    libreoffice-fresh
+    valent
   ];
 
   nixpkgs.config.allowUnfree = true;
