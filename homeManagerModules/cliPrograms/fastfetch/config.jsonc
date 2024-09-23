@@ -10,40 +10,30 @@
         "separator",
         "os",
         "host",
-        "bios",
-        "bootmgr",
         "kernel",
         "uptime",
-        "processes",
         "packages",
         "shell",
         "editor",
         "wm",
         "theme",
         "font",
-        "cursor",
         "terminal",
         {
+            "type": "display"
+        },
+        {
             "type": "cpu",
-            "showPeCoreCount": true,
-            "temp": true
+            "showPeCoreCount": true
         },
         {
             "type": "gpu",
-            "driverSpecific": true,
-            "temp": true
+            "driverSpecific": true
         },
         "memory",
         "physicalmemory",
-        "swap",
-        "disk",
         "poweradapter",
         "player",
-        {
-            "type": "localip",
-            "showSpeed": true
-        },
-        "datetime",
         "bluetooth",
         "bluetoothradio",
         "gamepad",
