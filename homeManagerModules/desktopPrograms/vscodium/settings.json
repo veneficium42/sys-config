@@ -5,10 +5,8 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.productIconTheme": "material-product-icons",
 
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontWeight": 500,
-    "editor.fontFamily": "FiraCode Nerd Font Mono",
     "editor.fontLigatures": true,
 
     "workbench.sideBar.location": "right",
