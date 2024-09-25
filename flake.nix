@@ -7,6 +7,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    stylix.url = "github:danth/stylix";
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
@@ -14,6 +16,7 @@
     inputs@{
       nixpkgs,
       home-manager,
+      stylix,
       nix-vscode-extensions,
       ...
     }:
@@ -35,6 +38,7 @@
           specialArgs = {
             pkgs = (pkgs system);
           };
+
           modules = [
             ./hosts/main-laptop/configuration.nix
             home-manager.nixosModules.home-manager
@@ -44,6 +48,7 @@
               home-manager.users.fedfer = import ./hosts/main-laptop/home.nix;
               home-manager.backupFileExtension = "backup";
             }
+            stylix.nixosModules.stylix
           ];
         };
 

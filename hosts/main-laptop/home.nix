@@ -31,6 +31,34 @@
     ];
   };
 
+  stylix.enable = true;
+  stylix = {
+    image = ../../res/wallpaper.png;
+    cursor = {
+      package = pkgs.catppuccin-cursors;
+      name = "macchiatoMauve";
+    };
+    fonts = {
+      packages = with pkgs; [
+        nerdfonts
+        cantarell-fonts
+      ];
+      monospace.name = "FiraCode Nerd Font Mono";
+      sansSerif.name = "Cantarell";
+      serif.name = "Cantarell";
+    };
+
+    targets = {
+      console.enable = true;
+      gnome.enable = true;
+      gtk.enable = true;
+      nixos-icons.enable = true;
+      firefox.enable = true;
+      vesktop.enable = true;
+      wezterm.enable = true;
+    };
+  };
+
   home.username = "fedfer";
   home.homeDirectory = "/home/fedfer";
 
