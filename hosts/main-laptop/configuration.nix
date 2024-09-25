@@ -15,6 +15,31 @@
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "fedfer" ];
 
+  stylix.enable = true;
+  stylix = {
+    polarity = "dark";
+    image = ../../res/wallpaper.png;
+    cursor = {
+      package = pkgs.catppuccin-cursors.macchiatoMauve;
+      name = "catppuccin-macchiato-mauve-cursors";
+    };
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    fonts = {
+      monospace = {
+        name = "FiraCode Nerd Font Mono";
+        package = pkgs.nerdfonts;
+      };
+      sansSerif = {
+        name = "Cantarell";
+        package = pkgs.cantarell-fonts;
+      };
+      serif = {
+        name = "Cantarell";
+        package = pkgs.cantarell-fonts;
+      };
+    };
+  };
+
   settings = {
     users.fedfer.enable = lib.mkForce true;
 

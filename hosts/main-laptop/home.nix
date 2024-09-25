@@ -33,26 +33,17 @@
 
   stylix.enable = true;
   stylix = {
+    polarity = "dark";
     image = ../../res/wallpaper.png;
     cursor = {
-      package = pkgs.catppuccin-cursors;
-      name = "macchiatoMauve";
+      package = pkgs.catppuccin-cursors.macchiatoMauve;
+      name = "catppuccin-macchiato-mauve-cursors";
     };
-    fonts = {
-      packages = with pkgs; [
-        nerdfonts
-        cantarell-fonts
-      ];
-      monospace.name = "FiraCode Nerd Font Mono";
-      sansSerif.name = "Cantarell";
-      serif.name = "Cantarell";
-    };
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
 
     targets = {
-      console.enable = true;
       gnome.enable = true;
       gtk.enable = true;
-      nixos-icons.enable = true;
       firefox.enable = true;
       vesktop.enable = true;
       wezterm.enable = true;
