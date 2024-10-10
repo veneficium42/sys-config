@@ -31,22 +31,16 @@
     ];
   };
 
-  stylix.enable = true;
   stylix = {
-    polarity = "dark";
-    image = ../../res/wallpaper.png;
-    cursor = {
-      package = pkgs.catppuccin-cursors.macchiatoMauve;
-      name = "catppuccin-macchiato-mauve-cursors";
-    };
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
-
+    enable = true;
     targets = {
       gnome.enable = true;
       gtk.enable = true;
       firefox.enable = true;
       vesktop.enable = true;
       wezterm.enable = true;
+      helix.enable = true;
+      vscode.enable = true;
     };
   };
 

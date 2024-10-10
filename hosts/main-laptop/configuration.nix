@@ -7,7 +7,6 @@
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
-  #required by virt-manager
   programs.dconf.enable = true;
 
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -23,20 +22,30 @@
       package = pkgs.catppuccin-cursors.macchiatoMauve;
       name = "catppuccin-macchiato-mauve-cursors";
     };
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     fonts = {
-      monospace = {
-        name = "FiraCode Nerd Font Mono";
-        package = pkgs.nerdfonts;
+      serif = {
+        package = pkgs.cantarell-fonts;
+        name = "Cantarell";
       };
       sansSerif = {
-        name = "Cantarell";
         package = pkgs.cantarell-fonts;
-      };
-      serif = {
         name = "Cantarell";
-        package = pkgs.cantarell-fonts;
       };
+      monospace = {
+        package = pkgs.fira-code-nerdfont;
+        name = "FiraCode Nerd Font Mono";
+      };
+      emoji = {
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
+      };
+    };
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/eighties.yaml";
+    targets = {
+      console.enable = true;
+      gnome.enable = true;
+      gtk.enable = true;
+      nixos-icons.enable = true;
     };
   };
 
