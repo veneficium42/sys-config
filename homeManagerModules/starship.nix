@@ -2,6 +2,8 @@
 {
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
+    #enableZshIntegration = true;
+    enableTransience = true;
+    enableFishIntegration = true;
   };
 }

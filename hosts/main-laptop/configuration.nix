@@ -49,6 +49,8 @@
     };
   };
 
+  programs.fish.enable = true;
+
   settings = {
     users.fedfer.enable = lib.mkForce true;
 

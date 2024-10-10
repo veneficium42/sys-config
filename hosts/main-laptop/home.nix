@@ -2,7 +2,8 @@
 {
 
   imports = [
-    ../../homeManagerModules/zsh.nix
+    #../../homeManagerModules/zsh.nix
+    ../../homeManagerModules/fish.nix
     ../../homeManagerModules/starship.nix
 
     ../../homeManagerModules/desktopPrograms/firefox.nix
@@ -67,12 +68,12 @@
     nixd
     nixpkgs-fmt
     nixfmt-rfc-style
-    fira-code-nerdfont
     powertop
     git-credential-manager
     vesktop
     libreoffice-fresh
     valent
+    logseq
   ];
 
   nixpkgs.config.allowUnfree = true;
