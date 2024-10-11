@@ -30,6 +30,7 @@
       ++ (with pkgs.open-vsx; [
         jeanp413.open-remote-ssh
         antfu.unocss
+        tamasfe.even-better-toml
       ]);
 
     userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
