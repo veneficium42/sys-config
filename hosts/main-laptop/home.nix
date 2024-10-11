@@ -4,13 +4,13 @@
   imports = [
     #../../homeManagerModules/zsh.nix
     ../../homeManagerModules/fish.nix
-    ../../homeManagerModules/starship.nix
 
     ../../homeManagerModules/desktopPrograms/firefox.nix
     ../../homeManagerModules/desktopPrograms/wezterm/wezterm.nix
     ../../homeManagerModules/desktopPrograms/vscodium/vscodium.nix
     ../../homeManagerModules/desktopPrograms/amberol.nix
 
+    ../../homeManagerModules/cliPrograms/starship/starship.nix
     ../../homeManagerModules/cliPrograms/fastfetch/fastfetch.nix
     ../../homeManagerModules/cliPrograms/hyfetch.nix
     ../../homeManagerModules/cliPrograms/bun.nix
