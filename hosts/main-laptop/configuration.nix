@@ -116,7 +116,6 @@
 
   #todo modularize!
   programs.xwayland.enable = true;
-  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
