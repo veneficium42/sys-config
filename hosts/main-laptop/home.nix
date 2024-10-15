@@ -29,6 +29,7 @@
       { package = pkgs.gnomeExtensions.tray-icons-reloaded; }
       { package = pkgs.gnomeExtensions.native-window-placement; }
       { package = pkgs.gnomeExtensions.system-monitor; }
+      { package = pkgs.gnomeExtensions.highlight-focus; }
     ];
   };
 
