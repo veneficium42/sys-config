@@ -5,6 +5,8 @@
     #../../homeManagerModules/zsh.nix
     ../../homeManagerModules/fish.nix
 
+    ../../homeManagerModules/development/rust.nix
+
     ../../homeManagerModules/desktopPrograms/firefox.nix
     ../../homeManagerModules/desktopPrograms/wezterm/wezterm.nix
     ../../homeManagerModules/desktopPrograms/vscodium/vscodium.nix
@@ -57,10 +59,7 @@
   home.packages = with pkgs; [
     prismlauncher
     foliate
-    rustc
-    rustfmt
     biome
-    cargo
     python3
     impression
     chatterino2

@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   #The VSCoderrrrrrrr
   #codepilled nixmaxxer
@@ -24,13 +24,11 @@
         bierner.markdown-emoji
         bierner.emojisense
         jnoortheen.nix-ide
-        rust-lang.rust-analyzer
         biomejs.biome
       ]
       ++ (with pkgs.open-vsx; [
         jeanp413.open-remote-ssh
         antfu.unocss
-        tamasfe.even-better-toml
       ]);
 
     userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
