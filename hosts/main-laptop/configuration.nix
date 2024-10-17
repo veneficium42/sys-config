@@ -123,7 +123,6 @@
   environment.systemPackages = with pkgs; [
     nano
     lshw
-    zsh
     fastfetch
     gparted
     gcc
