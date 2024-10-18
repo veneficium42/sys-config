@@ -3,6 +3,6 @@
   programs.wezterm = {
     enable = true;
     #enableZshIntegration = true;
-    extraConfig = builtins.readFile ./wezterm.lua;
+    extraConfig = builtins.replaceStrings [ "-- nix-replace" ] [ "" ] (builtins.readFile ./wezterm.lua);
   };
 }
