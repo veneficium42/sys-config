@@ -13,6 +13,8 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    niri.url = "github:sodiboo/niri-flake";
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
@@ -21,6 +23,7 @@
       nixpkgs,
       home-manager,
       stylix,
+      niri,
       nix-vscode-extensions,
       ...
     }:
@@ -29,7 +32,10 @@
         system:
         import nixpkgs {
           inherit system;
-          overlays = [ nix-vscode-extensions.overlays.default ];
+          overlays = [
+            nix-vscode-extensions.overlays.default
+            niri.overlays.niri
+          ];
           config = {
             allowUnfree = true;
           };
@@ -52,6 +58,7 @@
               home-manager.backupFileExtension = "backup";
             }
             stylix.nixosModules.stylix
+            niri.nixosModules.niri
           ];
         };
 
