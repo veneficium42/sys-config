@@ -8,6 +8,7 @@
 
     ./drivers/samsung-printer.nix
     ./drivers/ipod.nix
+    ./drivers/openrazer.nix
     ./drivers/gpu/amd.nix
     ./drivers/gpu/nvidia.nix
     ./drivers/gpu/disableNvidia.nix
@@ -40,6 +41,7 @@
     drivers = {
       printer.M2020.enable = lib.mkDefault false;
       ipod.enable = lib.mkDefault false;
+      openrazer.enable = lib.mkDefault false;
 
       gpu = {
         nvidia = {

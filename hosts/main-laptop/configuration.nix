@@ -62,6 +62,7 @@
     drivers = {
       printer.M2020.enable = lib.mkForce true;
       ipod.enable = lib.mkForce true;
+      openrazer.enable = lib.mkForce true;
       gpu.amd.enable = lib.mkForce true;
     };
 
