@@ -35,6 +35,7 @@
           overlays = [
             nix-vscode-extensions.overlays.default
             niri.overlays.niri
+            (import ./overlays/valent.nix)
           ];
           config = {
             allowUnfree = true;
