@@ -10,7 +10,7 @@ final: prev: {
       ++ (with prev.pkgs; [
         libportal
         libportal-gtk4
-        tracker
+        tinysparql
         gdk-pixbuf
         libphonenumber
       ]);
