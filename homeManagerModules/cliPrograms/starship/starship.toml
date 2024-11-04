@@ -111,7 +111,7 @@ format = '[ $percentage ]($style)'
 
 [[battery.display]]
 style = "bg:#DA627D"
-threshold = 60
+threshold = 59
 
 [sudo]
 disabled = false
