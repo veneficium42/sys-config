@@ -73,7 +73,9 @@
     vesktop
     libreoffice-fresh
     valent
-    logseq
+    whatsie
+    # logseq requires electron 27 which is EOL therefore temp disable until upstream pkg updates
+    #logseq
   ];
 
   nixpkgs.config.allowUnfree = true;
