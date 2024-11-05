@@ -1,24 +1,31 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
 
   imports = [
     #../../homeManagerModules/zsh.nix
-    ../../homeManagerModules/fish.nix
-
-    ../../homeManagerModules/development/rust.nix
-
-    ../../homeManagerModules/desktopPrograms/firefox.nix
-    ../../homeManagerModules/desktopPrograms/wezterm/wezterm.nix
-    ../../homeManagerModules/desktopPrograms/vscodium/vscodium.nix
-    ../../homeManagerModules/desktopPrograms/amberol.nix
-
-    ../../homeManagerModules/cliPrograms/starship/starship.nix
-    ../../homeManagerModules/cliPrograms/fastfetch/fastfetch.nix
-    ../../homeManagerModules/cliPrograms/hyfetch.nix
-    ../../homeManagerModules/cliPrograms/bun.nix
-    ../../homeManagerModules/cliPrograms/git.nix
-    ../../homeManagerModules/cliPrograms/pass.nix
+    ../../homeManagerModules/default.nix
   ];
+
+  settings = {
+    development = {
+      rust = {
+        enable = lib.mkForce true;
+        enableVSCode = lib.mkForce true;
+      };
+
+      bun.enable = lib.mkForce true;
+    };
+
+    programs = {
+      firefox.enable = lib.mkForce true;
+      amberol.enable = lib.mkForce true;
+      wezterm.enable = lib.mkForce true;
+      vscodium.enable = lib.mkForce true;
+
+      starship.enable = lib.mkForce true;
+      hyfetch.enable = lib.mkForce true;
+    };
+  };
 
   #todo: EditorConfig support ( https://editorconfig.org )
 

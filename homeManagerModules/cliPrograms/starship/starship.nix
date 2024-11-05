@@ -1,11 +1,17 @@
-{ ... }:
+{ config, lib, ... }:
 {
-  programs.starship = {
-    enable = true;
-    #enableZshIntegration = true;
-    enableTransience = true;
-    enableFishIntegration = true;
+  options.settings.programs.starship = {
+    enable = lib.mkEnableOption "enable starship prompt";
+  };
 
-    settings = builtins.fromTOML (builtins.readFile ./starship.toml);
+  config = lib.mkIf config.settings.programs.starship.enable {
+    programs.starship = {
+      enable = true;
+      #enableZshIntegration = true;
+      enableTransience = true;
+      enableFishIntegration = true;
+
+      settings = builtins.fromTOML (builtins.readFile ./starship.toml);
+    };
   };
 }

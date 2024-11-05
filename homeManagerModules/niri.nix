@@ -1,4 +1,4 @@
 { ... }:
 {
-  programs.niri.config = "";
+  programs.niri.config = null;
 }
