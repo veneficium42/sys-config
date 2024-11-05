@@ -3,7 +3,7 @@
   imports = [
     #./zsh.nix
     ./fish.nix
-    ./niri.nix
+    ./niri/niri.nix
 
     ./development/rust.nix
     ./development/bun.nix
