@@ -15,6 +15,7 @@
   users.extraGroups.vboxusers.members = [ "fedfer" ];
 
   stylix.enable = true;
+  stylix.autoEnable = true;
   stylix = {
     polarity = "dark";
     image = ../../res/wallpaper.png;
@@ -46,6 +47,8 @@
       gnome.enable = true;
       gtk.enable = true;
       nixos-icons.enable = true;
+      fish.enable = true;
+      kmscon.enable = true;
     };
   };
 

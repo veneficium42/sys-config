@@ -44,6 +44,7 @@
 
   stylix = {
     enable = true;
+    autoEnable = true;
     targets = {
       gnome.enable = true;
       gtk.enable = true;
@@ -52,6 +53,7 @@
       wezterm.enable = true;
       helix.enable = true;
       vscode.enable = true;
+      fish.enable = true;
     };
   };
 
