@@ -35,6 +35,7 @@
           bierner.emojisense
           jnoortheen.nix-ide
           biomejs.biome
+          kdl-org.kdl
         ]
         ++ (with pkgs.open-vsx; [
           jeanp413.open-remote-ssh
