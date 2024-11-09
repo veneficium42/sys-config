@@ -23,9 +23,9 @@
       mutableExtensionsDir = false;
 
       extensions =
-        with pkgs.vscode-extensions;
+        with pkgs.vscode-marketplace;
         [
-          ms-vscode.cpptools
+          ms-vscode.cpptools-extension-pack
           ms-vscode.live-server
           mhutchie.git-graph
           pkief.material-icon-theme
