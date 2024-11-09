@@ -26,6 +26,8 @@
     ./programs/tailscale.nix
     ./programs/powertop.nix
     ./programs/gnupg.nix
+
+    ./programs/niri.nix
   ];
 
   settings = {
