@@ -82,7 +82,8 @@
     vesktop
     libreoffice-fresh
     valent
-    whatsie
+    zapzap
+    kicad-small
     # logseq requires electron 27 which is EOL therefore temp disable until upstream pkg updates
     #logseq
   ];
