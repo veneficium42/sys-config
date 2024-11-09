@@ -277,6 +277,11 @@ binds {
     Caps_Lock             allow-when-locked=true { spawn "sh" "-c" "sleep 0.06 && swayosd-client --caps-lock"; }
     Num_Lock              allow-when-locked=true { spawn "sh" "-c" "sleep 0.06 && swayosd-client --num-lock"; }
 
+    XF86AudioPlay         allow-when-locked=true { spawn "playerctl" "play-pause"; }
+    XF86AudioStop         allow-when-locked=true { spawn "playerctl" "stop"; }
+    XF86AudioPrev         allow-when-locked=true { spawn "playerctl" "previous"; }
+    XF86AudioNext         allow-when-locked=true { spawn "playerctl" "next"; }
+
     Mod+Q { close-window; }
 
     Mod+Left  { focus-column-left; }

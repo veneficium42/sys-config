@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   services.mako = {
     enable = true;
@@ -12,4 +12,7 @@
     settings = builtins.readFile ./yambar.yml;
   };
   programs.niri.config = builtins.readFile ./config.kdl;
+  home.packages = with pkgs; [
+    playerctl
+  ];
 }
