@@ -14,6 +14,7 @@
     };
 
     niri.url = "github:sodiboo/niri-flake";
+    ags.url = "github:Aylur/ags";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
@@ -24,6 +25,7 @@
       home-manager,
       stylix,
       niri,
+      ags,
       nix-vscode-extensions,
       ...
     }:
@@ -57,6 +59,9 @@
               home-manager.useGlobalPkgs = true;
               home-manager.users.fedfer = import ./hosts/main-laptop/home.nix;
               home-manager.backupFileExtension = "backup";
+              home-manager.extraSpecialArgs = {
+                inherit inputs;
+              };
             }
             stylix.nixosModules.stylix
             niri.nixosModules.niri
