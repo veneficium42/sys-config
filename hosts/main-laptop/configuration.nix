@@ -6,6 +6,7 @@
   ];
 
   qt.style = "adwaita";
+  services.blueman.enable = true;
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
