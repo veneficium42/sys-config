@@ -79,7 +79,6 @@
     impression
     chatterino2
     qbittorrent
-    nil
     nixd
     nixpkgs-fmt
     nixfmt-rfc-style
