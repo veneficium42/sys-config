@@ -91,6 +91,13 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.edk2-uefi-shell.enable = true;
+  boot.loader.systemd-boot.windows = {
+    "11" = {
+      title = "Windows 11 (gaming)";
+      efiDeviceHandle = "FS0";
+    };
+  };
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.loader.systemd-boot.configurationLimit = 10;
