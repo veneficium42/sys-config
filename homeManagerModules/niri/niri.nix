@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  imports = [ ./ags.nix ];
+
   services.mako = {
     enable = true;
     extraConfig = builtins.readFile ./mako.conf;
