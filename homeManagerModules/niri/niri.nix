@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  imports = [ ./ags.nix ];
+  imports = [ ./ags/ags.nix ];
 
   services.mako = {
     enable = true;
