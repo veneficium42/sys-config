@@ -9,6 +9,11 @@
   services.swayosd = {
     enable = true;
   };
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+    settings = builtins.fromJSON (builtins.readFile ./waybar.jsonc);
+  };
   programs.niri.config = builtins.readFile ./config.kdl;
   home.packages = with pkgs; [
     playerctl
