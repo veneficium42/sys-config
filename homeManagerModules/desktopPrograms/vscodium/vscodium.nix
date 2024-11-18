@@ -25,7 +25,6 @@
       extensions =
         with pkgs.vscode-marketplace;
         [
-          ms-vscode.cpptools-extension-pack
           ms-vscode.live-server
           mhutchie.git-graph
           pkief.material-icon-theme
@@ -42,6 +41,9 @@
           antfu.unocss
           bierner.markdown-preview-github-styles
           sumneko.lua
+        ])
+        ++ ([
+          pkgs.vscode-extensions.ms-vscode.cpptools
         ]);
 
       userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
