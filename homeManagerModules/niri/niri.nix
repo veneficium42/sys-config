@@ -12,7 +12,9 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
-    settings = builtins.fromJSON (builtins.readFile ./waybar.json);
+    settings = [
+      (builtins.fromJSON (builtins.readFile ./waybar.json))
+    ];
   };
   programs.niri.config = builtins.readFile ./config.kdl;
   home.packages = with pkgs; [
