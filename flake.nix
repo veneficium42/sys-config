@@ -14,7 +14,6 @@
     };
 
     niri.url = "github:sodiboo/niri-flake";
-    ags.url = "github:Aylur/ags";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
@@ -25,7 +24,6 @@
       home-manager,
       stylix,
       niri,
-      ags,
       nix-vscode-extensions,
       ...
     }:

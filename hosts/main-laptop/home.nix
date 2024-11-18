@@ -9,7 +9,6 @@
   imports = [
     #../../homeManagerModules/zsh.nix
     ../../homeManagerModules/default.nix
-    inputs.ags.homeManagerModules.default
   ];
 
   settings = {
