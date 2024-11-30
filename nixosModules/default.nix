@@ -39,6 +39,7 @@
     programs.powertop.enable = lib.mkDefault true;
     programs.gnupg.enable = lib.mkDefault true;
     programs.gnupg.ssh = lib.mkDefault true;
+    programs.niri.enable = lib.mkDefault false;
 
     drivers = {
       printer.M2020.enable = lib.mkDefault false;

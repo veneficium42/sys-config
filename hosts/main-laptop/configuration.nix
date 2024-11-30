@@ -64,6 +64,7 @@
     programs.tailscale.enable = lib.mkForce true;
     programs.gnupg.enable = lib.mkForce true;
     programs.gnupg.ssh = lib.mkForce true;
+    programs.niri.enable = lib.mkForce true;
 
     drivers = {
       printer.M2020.enable = lib.mkForce true;
