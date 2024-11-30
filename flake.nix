@@ -4,6 +4,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    inputs.microvm.url = "github:astro/microvm.nix";
+    inputs.microvm.inputs.nixpkgs.follows = "nixpkgs";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -21,6 +24,7 @@
   outputs =
     inputs@{
       nixpkgs,
+      microvm,
       home-manager,
       stylix,
       niri,
@@ -73,7 +77,24 @@
           specialArgs = {
             pkgs = (pkgs [ ] system);
           };
-          modules = [ ./hosts/main-homelab/configuration.nix ];
+          modules = [
+            ./hosts/main-homelab/configuration.nix
+            microvm.nixosModules.host
+          ];
+        };
+
+        veneficium-microvm-vaultwarden = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = {
+            pkgs = (pkgs [ ] system);
+          };
+          modules = [
+            microvm.nixosModules.microvm
+            {
+              networking.hostname = "veneficium-microvm-vaultwarden";
+              microvm.hypervisor = "firecracker";
+            }
+          ];
         };
       };
       formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
