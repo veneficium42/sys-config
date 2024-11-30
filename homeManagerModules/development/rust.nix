@@ -15,6 +15,7 @@
       cargo
       rustc
       rustfmt
+      rust-analyzer
     ];
 
     programs.vscode.extensions = lib.mkIf config.settings.development.rust.enableVSCode (
