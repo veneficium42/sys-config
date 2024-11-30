@@ -29,14 +29,10 @@
     }:
     let
       pkgs =
-        system:
+        extraOverlays: system:
         import nixpkgs {
           inherit system;
-          overlays = [
-            nix-vscode-extensions.overlays.default
-            niri.overlays.niri
-            (import ./overlays/valent.nix)
-          ];
+          overlays = extraOverlays;
           config = {
             allowUnfree = true;
           };
@@ -47,7 +43,13 @@
         fedfer-main-laptop-nixos = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = {
-            pkgs = (pkgs system);
+            pkgs = (
+              pkgs [
+                nix-vscode-extensions.overlays.default
+                niri.overlays.niri
+                (import ./overlays/valent.nix)
+              ] system
+            );
           };
 
           modules = [
@@ -69,7 +71,7 @@
         veneficium-main-homelab-nixos = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = {
-            pkgs = (pkgs system);
+            pkgs = (pkgs [ ] system);
           };
           modules = [ ./hosts/main-homelab/configuration.nix ];
         };
