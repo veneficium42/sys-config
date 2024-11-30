@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  self,
+  pkgs,
+  lib,
+  ...
+}:
 {
 
   imports = [
@@ -8,7 +13,9 @@
   ];
 
   microvm.vms = {
-    "veneficium-microvm-vaultwarden" = { };
+    "veneficium-microvm-vaultwarden" = {
+      flake = self;
+    };
   };
 
   settings = {
