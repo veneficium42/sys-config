@@ -7,6 +7,10 @@
     ../../nixosModules/default.nix
   ];
 
+  microvm.vms = {
+    "veneficium-microvm-vaultwarden" = { };
+  };
+
   settings = {
     users.veneficium.enable = lib.mkForce true;
 
