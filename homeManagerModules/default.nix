@@ -18,6 +18,7 @@
     ./desktopPrograms/firefox.nix
     ./desktopPrograms/amberol.nix
 
+    ./desktopPrograms/zed/zed.nix
     ./desktopPrograms/wezterm/wezterm.nix
     ./desktopPrograms/vscodium/vscodium.nix
   ];
@@ -39,6 +40,7 @@
       amberol.enable = lib.mkDefault false;
       wezterm.enable = lib.mkDefault false;
       vscodium.enable = lib.mkDefault false;
+      zed.enable = lib.mkDefault false;
 
       pass.enable = lib.mkDefault true;
       hyfetch.enable = lib.mkDefault false;
