@@ -23,6 +23,7 @@
 
   outputs =
     inputs@{
+      self,
       nixpkgs,
       microvm,
       home-manager,
@@ -76,6 +77,7 @@
           system = "x86_64-linux";
           specialArgs = {
             pkgs = (pkgs [ ] system);
+            inherit self;
           };
           modules = [
             ./hosts/main-homelab/configuration.nix
