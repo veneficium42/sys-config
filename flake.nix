@@ -92,10 +92,7 @@
           };
           modules = [
             microvm.nixosModules.microvm
-            {
-              networking.hostName = "veneficium-microvm-vaultwarden";
-              microvm.hypervisor = "firecracker";
-            }
+            ./microvms/vaultwarden/configuration.nix
           ];
         };
       };
