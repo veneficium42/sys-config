@@ -93,7 +93,7 @@
           modules = [
             microvm.nixosModules.microvm
             {
-              networking.hostname = "veneficium-microvm-vaultwarden";
+              networking.hostName = "veneficium-microvm-vaultwarden";
               microvm.hypervisor = "firecracker";
             }
           ];
