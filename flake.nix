@@ -4,9 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    microvm.url = "github:astro/microvm.nix";
-    microvm.inputs.nixpkgs.follows = "nixpkgs";
-
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -25,7 +22,6 @@
     inputs@{
       self,
       nixpkgs,
-      microvm,
       home-manager,
       stylix,
       niri,
@@ -82,17 +78,6 @@
           modules = [
             ./hosts/main-homelab/configuration.nix
             microvm.nixosModules.host
-          ];
-        };
-
-        veneficium-microvm-vaultwarden = nixpkgs.lib.nixosSystem rec {
-          system = "x86_64-linux";
-          specialArgs = {
-            pkgs = (pkgs [ ] system);
-          };
-          modules = [
-            microvm.nixosModules.microvm
-            ./microvms/vaultwarden/configuration.nix
           ];
         };
       };
