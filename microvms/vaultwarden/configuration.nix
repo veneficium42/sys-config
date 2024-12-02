@@ -1,7 +1,7 @@
 { config, ... }:
 {
   networking.hostName = "veneficium-microvm-vaultwarden";
-  microvm.hypervisor = "cloud-hypervisor";
+  microvm.hypervisor = "stratovirt";
   microvm.shares = [
     {
       source = "/nix/store";
