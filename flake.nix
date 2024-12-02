@@ -77,7 +77,6 @@
           };
           modules = [
             ./hosts/main-homelab/configuration.nix
-            microvm.nixosModules.host
           ];
         };
       };
