@@ -10,11 +10,7 @@
 
   settings = {
     development = {
-      rust = {
-        enable = lib.mkForce true;
-        enableVSCode = lib.mkForce true;
-      };
-
+      rust.enable = lib.mkForce true;
       bun.enable = lib.mkForce true;
     };
 
