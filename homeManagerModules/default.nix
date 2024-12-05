@@ -14,6 +14,7 @@
 
     ./cliPrograms/starship/starship.nix
     ./cliPrograms/fastfetch/fastfetch.nix
+    ./cliPrograms/helix/helix.nix
 
     ./desktopPrograms/firefox.nix
     ./desktopPrograms/amberol.nix
@@ -47,6 +48,7 @@
       git.enable = lib.mkDefault true;
       starship.enable = lib.mkDefault false;
       fastfetch.enable = lib.mkDefault true;
+      helix.enable = lib.mkDefault false;
     };
   };
 
