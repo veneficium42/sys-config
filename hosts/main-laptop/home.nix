@@ -19,7 +19,6 @@
       amberol.enable = lib.mkForce true;
       wezterm.enable = lib.mkForce true;
       vscodium.enable = lib.mkForce true;
-      zed.enable = lib.mkForce true;
 
       starship.enable = lib.mkForce true;
       hyfetch.enable = lib.mkForce true;
