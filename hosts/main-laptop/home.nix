@@ -77,7 +77,7 @@
     powertop
     git-credential-manager
     vesktop
-    libreoffice-fresh
+    libreoffice
     valent
     zapzap
     kicad-small
