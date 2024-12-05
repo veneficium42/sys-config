@@ -22,9 +22,8 @@
       enableExtensionUpdateCheck = false;
       mutableExtensionsDir = false;
 
-      extensions =
-        with pkgs.vscode-marketplace;
-        [
+      extensions = lib.mkMerge [
+        (with pkgs.vscode-marketplace; [
           ms-vscode.live-server
           mhutchie.git-graph
           pkief.material-icon-theme
@@ -35,16 +34,26 @@
           jnoortheen.nix-ide
           biomejs.biome
           kdl-org.kdl
-        ]
-        ++ (with pkgs.open-vsx; [
+        ])
+        (with pkgs.open-vsx; [
           jeanp413.open-remote-ssh
           antfu.unocss
           bierner.markdown-preview-github-styles
           sumneko.lua
         ])
-        ++ ([
-          pkgs.vscode-extensions.ms-vscode.cpptools
-        ]);
+        (with pkgs.vscode-extensions; [
+          ms-vscode.cpptools
+        ])
+        (lib.mkIf config.settings.development.rust.enable (
+          with pkgs.vscode-extensions;
+          [
+            rust-lang.rust-analyzer
+          ]
+          ++ (with pkgs.open-vsx; [
+            tamasfe.even-better-toml
+          ])
+        ))
+      ];
 
       userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
     };

@@ -6,10 +6,7 @@
 }:
 {
 
-  imports = [
-    #../../homeManagerModules/zsh.nix
-    ../../homeManagerModules/default.nix
-  ];
+  imports = [ ../../homeManagerModules ];
 
   settings = {
     development = {

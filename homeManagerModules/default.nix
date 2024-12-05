@@ -1,8 +1,7 @@
 { lib, ... }:
 {
   imports = [
-    #./zsh.nix
-    ./fish.nix
+    ./shells/fish.nix
     ./niri/niri.nix
 
     ./development/rust.nix
@@ -12,27 +11,23 @@
     ./cliPrograms/hyfetch.nix
     ./cliPrograms/git.nix
 
-    ./cliPrograms/starship/starship.nix
-    ./cliPrograms/fastfetch/fastfetch.nix
-    ./cliPrograms/helix/helix.nix
+    ./cliPrograms/starship
+    ./cliPrograms/fastfetch
+    ./cliPrograms/helix
 
     ./desktopPrograms/firefox.nix
     ./desktopPrograms/amberol.nix
 
-    ./desktopPrograms/zed/zed.nix
-    ./desktopPrograms/wezterm/wezterm.nix
-    ./desktopPrograms/vscodium/vscodium.nix
+    ./desktopPrograms/zed
+    ./desktopPrograms/wezterm
+    ./desktopPrograms/vscodium
   ];
 
   settings = {
     shell.fish.enable = lib.mkDefault true;
 
     development = {
-      rust = {
-        enable = lib.mkDefault false;
-        enableVSCode = lib.mkDefault false;
-      };
-
+      rust.enable = lib.mkDefault false;
       bun.enable = lib.mkDefault false;
     };
 
@@ -44,10 +39,10 @@
       zed.enable = lib.mkDefault false;
 
       pass.enable = lib.mkDefault true;
-      hyfetch.enable = lib.mkDefault false;
-      git.enable = lib.mkDefault true;
-      starship.enable = lib.mkDefault false;
       fastfetch.enable = lib.mkDefault true;
+      git.enable = lib.mkDefault true;
+      hyfetch.enable = lib.mkDefault false;
+      starship.enable = lib.mkDefault false;
       helix.enable = lib.mkDefault false;
     };
   };
