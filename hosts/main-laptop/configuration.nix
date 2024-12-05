@@ -90,7 +90,7 @@
   #enable wayland for electron programs
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_11;
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.edk2-uefi-shell.enable = true;
   boot.loader.systemd-boot.windows = {
