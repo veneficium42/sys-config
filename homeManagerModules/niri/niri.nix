@@ -14,6 +14,7 @@
     settings = [
       (builtins.fromJSON (builtins.readFile ./waybar.json))
     ];
+    style = builtins.readFile ./waybar.css;
   };
   programs.niri.config = builtins.readFile ./config.kdl;
   home.packages = with pkgs; [
