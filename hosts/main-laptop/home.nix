@@ -21,6 +21,7 @@
       vscodium.enable = lib.mkForce true;
 
       starship.enable = lib.mkForce true;
+      helix.enable = lib.mkForce true;
       hyfetch.enable = lib.mkForce true;
       neovim.enable = lib.mkForce true;
     };
