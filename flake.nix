@@ -7,6 +7,9 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    arion.url = "github:hercules-ci/arion";
+    arion.inputs.nixpkgs.follows = "nixpkgs";
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +26,7 @@
       self,
       nixpkgs,
       home-manager,
+      arion,
       stylix,
       niri,
       nix-vscode-extensions,
@@ -75,6 +79,7 @@
             inherit self;
           };
           modules = [
+            arion.nixosModules.arion
             ./hosts/main-homelab/configuration.nix
           ];
         };

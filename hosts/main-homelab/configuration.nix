@@ -37,6 +37,10 @@
 
   networking.networkmanager.enable = true;
 
+  virtualisation.arion = {
+    backend = "podman-socket";
+  };
+
   environment.systemPackages = with pkgs; [
     nano
     lshw
