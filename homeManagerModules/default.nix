@@ -14,7 +14,7 @@
     ./cliPrograms/starship
     ./cliPrograms/fastfetch
     ./cliPrograms/helix
-    ./cliPorgrams/neovim
+    ./cliPrograms/neovim
 
     ./desktopPrograms/firefox.nix
     ./desktopPrograms/amberol.nix
