@@ -14,6 +14,7 @@
     ./cliPrograms/starship
     ./cliPrograms/fastfetch
     ./cliPrograms/helix
+    ./cliPorgrams/neovim
 
     ./desktopPrograms/firefox.nix
     ./desktopPrograms/amberol.nix
@@ -44,6 +45,7 @@
       hyfetch.enable = lib.mkDefault false;
       starship.enable = lib.mkDefault false;
       helix.enable = lib.mkDefault false;
+      neovim.enable = lib.mkDefault false;
     };
   };
 

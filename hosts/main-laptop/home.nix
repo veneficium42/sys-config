@@ -22,6 +22,7 @@
 
       starship.enable = lib.mkForce true;
       hyfetch.enable = lib.mkForce true;
+      neovim.enable = lib.mkForce true;
     };
   };
 
