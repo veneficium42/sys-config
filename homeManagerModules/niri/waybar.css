@@ -4,18 +4,26 @@
 }
 
 window#waybar {
-	background: #292b2e;
+	background-color: transparent;
 	color: #fdf6e3;
+	padding: 1px 0;
+	min-height: 25px;
+}
+
+.modules-right {
+    margin: 2px 10px 0 0;
+}
+.modules-center {
+    margin: 2px 0 0 0;
+}
+.modules-left {
+    margin: 2px 0 0 5px;
 }
 
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
 	color: #1a1a1a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #292b2e;
-	background: #1a1a1a;
+	font-size: 23px;
 }
 
 #workspaces,
@@ -59,6 +67,12 @@ window#waybar {
 }
 #battery {
 	color: #859900;
+}
+#battery.warning {
+	color: #d08535;
+}
+#battery.critical {
+	color: #ca4238;
 }
 #disk {
 	color: #b58900;
