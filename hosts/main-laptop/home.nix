@@ -29,6 +29,8 @@
 
   #todo: EditorConfig support ( https://editorconfig.org )
 
+  services.mpris-proxy.enable = true;
+
   programs.gnome-shell = {
     enable = true;
     extensions = [
