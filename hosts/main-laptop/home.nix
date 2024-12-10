@@ -56,6 +56,7 @@
       helix.enable = true;
       vscode.enable = true;
       fish.enable = true;
+      wpaperd.enable = true;
     };
   };
 
