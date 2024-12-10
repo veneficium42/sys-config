@@ -1,5 +1,16 @@
 { pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    swayosd
+    fuzzel
+    alacritty
+    wl-clipboard
+    wayland-utils
+    libsecret
+    xwayland-satellite-unstable
+    playerctl
+    pwvucontrol
+  ];
 
   services.mako = {
     enable = true;
@@ -17,7 +28,4 @@
     style = builtins.readFile ./waybar.css;
   };
   programs.niri.config = builtins.readFile ./config.kdl;
-  home.packages = with pkgs; [
-    playerctl
-  ];
 }
