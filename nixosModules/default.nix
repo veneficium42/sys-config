@@ -27,6 +27,7 @@
     ./programs/powertop.nix
     ./programs/gnupg.nix
 
+    ./programs/tuigreet.nix
     ./programs/niri.nix
   ];
 
@@ -40,6 +41,7 @@
     programs.gnupg.enable = lib.mkDefault true;
     programs.gnupg.ssh = lib.mkDefault true;
     programs.niri.enable = lib.mkDefault false;
+    programs.tuigreet.enable = lib.mkDefault false;
 
     drivers = {
       printer.M2020.enable = lib.mkDefault false;

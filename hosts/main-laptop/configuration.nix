@@ -65,6 +65,7 @@
     programs.gnupg.enable = lib.mkForce true;
     programs.gnupg.ssh = lib.mkForce true;
     programs.niri.enable = lib.mkForce true;
+    programs.tuigreet.enable = lib.mkForce true;
 
     drivers = {
       printer.M2020.enable = lib.mkForce true;
@@ -73,7 +74,6 @@
       gpu.amd.enable = lib.mkForce true;
     };
 
-    gnome.enable = lib.mkForce true;
     services.printing.enable = lib.mkForce true;
     services.audio.enable = lib.mkForce true;
   };
