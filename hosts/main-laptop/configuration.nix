@@ -12,6 +12,11 @@
   programs.virt-manager.enable = true;
   programs.dconf.enable = true;
 
+  services.kmscon = {
+    enable = true;
+    hwRender = true;
+  };
+
   systemd.services.NetworkManager-wait-online.enable = false;
 
   virtualisation.virtualbox.host.enable = true;
