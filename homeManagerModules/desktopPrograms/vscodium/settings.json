@@ -4,9 +4,6 @@
 
     "workbench.iconTheme": "material-icon-theme",
     "workbench.productIconTheme": "material-product-icons",
-
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontWeight": 500,
     "editor.fontLigatures": true,
 
     "workbench.sideBar.location": "right",
