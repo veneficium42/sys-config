@@ -24,6 +24,8 @@
               networking.useDHCP = false;
               services.nscd.enable = false;
               system.nssModules = lib.mkForce [ ];
+
+              services.jellyfin.enable = true;
             };
           service.ports = [ "8096:8096" ];
         };
