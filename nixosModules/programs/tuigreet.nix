@@ -14,7 +14,7 @@
       enable = true;
       settings = {
         default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd niri";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet -t -g \"Haii! :3\" --theme \"container=black;input=lightBlue;prompt=green;greet=magenta;border=blue\"";
           user = "greeter";
         };
       };
