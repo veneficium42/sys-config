@@ -11,6 +11,11 @@
     pwvucontrol
   ];
 
+  programs.swaylock = {
+    enable = true;
+    settings = builtins.fromJSON (builtins.readFile ./swaylock.json);
+  };
+
   services.mako = {
     enable = true;
     extraConfig = builtins.readFile ./mako.conf;

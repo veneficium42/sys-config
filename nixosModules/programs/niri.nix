@@ -14,6 +14,8 @@
     programs.niri.enable = true;
     programs.niri.package = pkgs.niri-unstable;
 
+    security.pam.services.swaylock = { };
+
     environment.systemPackages = with pkgs; [
       swayosd
       fuzzel
