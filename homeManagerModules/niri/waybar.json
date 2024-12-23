@@ -1,52 +1,27 @@
 {
 	"layer": "top",
 	"position": "top",
-
+	"spacing": 10,
 	"modules-left": [
-		"custom/left-arrow-dark",
-		"niri/workspaces",
-		"custom/right-arrow-dark"
+		"niri/workspaces"
 	],
 	"modules-center": [
-		"custom/left-arrow-dark",
 		"clock#1",
 		"clock#2",
-		"clock#3",
-		"custom/right-arrow-dark"
+		"clock#3"
 	],
 	"modules-right": [
-		"custom/left-arrow-dark",
 		"pulseaudio",
 		"memory",
 		"cpu",
 		"battery",
 		"disk",
-		"tray",
-		"custom/right-arrow-dark"
+		"tray"
 	],
-
-	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-
 	"sway/workspaces": {
 		"disable-scroll": true,
 		"format": "{name}"
 	},
-
 	"clock#1": {
 		"format": "{:%a}",
 		"tooltip": false
@@ -59,9 +34,8 @@
 		"format": "{:%d-%m}",
 		"tooltip": false
 	},
-
 	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
+		"format": "{icon}    {volume:2}%",
 		"format-bluetooth": "{icon}    {volume}% ",
 		"format-muted": "",
 		"format-icons": {
@@ -105,7 +79,7 @@
 		"path": "/"
 	},
 	"tray": {
-		"icon-size": 20,
-		"spacing": 4
+		"icon-size": 22,
+		"spacing": 6
 	}
 }
