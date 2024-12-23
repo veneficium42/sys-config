@@ -10,6 +10,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/nixos
+    ../../containers/jellyfin.nix
   ];
 
   settings = {
@@ -27,6 +28,8 @@
       openssh.enable = lib.mkForce true;
       openssh.usePAM = lib.mkForce true;
     };
+
+    containers.jellyfin.enable = true;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
