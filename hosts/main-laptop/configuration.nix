@@ -2,7 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../nixosModules/default.nix
+    ../../modules/nixos
   ];
 
   qt.style = "adwaita";

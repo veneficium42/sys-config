@@ -6,7 +6,7 @@
 }:
 {
 
-  imports = [ ../../homeManagerModules ];
+  imports = [ ../../modules/home ];
 
   settings = {
     development = {
