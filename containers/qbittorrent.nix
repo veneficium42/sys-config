@@ -5,14 +5,14 @@
   ...
 }:
 {
-  options.settings.containers.qbittorent = {
-    enable = lib.mkEnableOption "enable qbittorent arion container";
+  options.settings.containers.qbittorrent = {
+    enable = lib.mkEnableOption "enable qbittorrent arion container";
   };
 
-  config = lib.mkIf config.settings.containers.qbittorent.enable {
+  config = lib.mkIf config.settings.containers.qbittorrent.enable {
     virtualisation.arion.projects.qbittorent = {
       settings = {
-        project.name = "qbittorent";
+        project.name = "qbittorrent";
         services.qbittorent = {
           service.useHostStore = true;
           service.image = "linuxserver/qbittorrent:latest";
@@ -22,7 +22,7 @@
             "6881:6881/udp"
           ];
           service.volumes = [
-            "/config/qbittorent:/config"
+            "/config/qbittorrent:/config"
             "/data/torrents:/torrents"
           ];
           service.environment = {
