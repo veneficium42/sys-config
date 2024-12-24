@@ -30,6 +30,7 @@
 
     containers.jellyfin.enable = lib.mkForce true;
     containers.qbittorrent.enable = lib.mkForce true;
+    containers.lidarr.enable = lib.mkForce true;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
