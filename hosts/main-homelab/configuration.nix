@@ -29,6 +29,7 @@
     };
 
     containers.jellyfin.enable = lib.mkForce true;
+    containers.qbittorent.enable = lib.mkForce true;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
