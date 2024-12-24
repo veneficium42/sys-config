@@ -28,6 +28,7 @@
               services.lidarr.enable = true;
               services.lidarr.openFirewall = true;
               services.lidarr.dataDir = "/config";
+              services.lidarr.user = "root";
             };
           service.ports = [ "8686:8686" ];
           service.volumes = [
