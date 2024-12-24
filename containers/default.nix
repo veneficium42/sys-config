@@ -1,8 +1,8 @@
 { lib, ... }:
 {
   imports = [
-    "./jellyfin.nix"
-    "./qbittorent.nix"
+    ./jellyfin.nix
+    ./qbittorent.nix
   ];
 
   settings.containers = {
