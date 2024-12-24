@@ -30,6 +30,10 @@
             };
           service.ports = [ "8096:8096" ];
           service.devices = [ "/dev/dri/renderD128:/dev/dri/renderD128" ];
+          service.volumes = [
+            "/config/jellyfin:/config"
+            "/data/media:/media"
+          ];
         };
       };
     };
