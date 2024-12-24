@@ -26,6 +26,7 @@
               system.nssModules = lib.mkForce [ ];
 
               services.jellyfin.enable = true;
+              services.jellyfin.openFirewall = true;
             };
           service.ports = [ "8096:8096" ];
         };

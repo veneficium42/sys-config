@@ -40,9 +40,15 @@
 
   networking.networkmanager.enable = true;
 
+  virtualisation.docker.enable = false;
+  virtualisation.podman.enable = true;
+  virtualisation.podman.dockerSocket.enable = true;
+  virtualisation.podman.defaultNetwork.dnsname.enable = true;
   virtualisation.arion = {
     backend = "podman-socket";
   };
+
+  users.extraUsers.veneficium.extraGroups = [ "podman" ];
 
   environment.systemPackages = with pkgs; [
     nano
@@ -53,6 +59,8 @@
     pass-wayland
     git
     google-authenticator
+    arion
+    docker-client
   ];
 
   programs.zsh.enable = true;
