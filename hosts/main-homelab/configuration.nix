@@ -48,6 +48,15 @@
     backend = "podman-socket";
   };
 
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      vpl-gpu-rt
+      libvdpau-va-gl
+    ];
+  };
+
   users.extraUsers.veneficium.extraGroups = [ "podman" ];
 
   environment.systemPackages = with pkgs; [
