@@ -25,6 +25,15 @@
               services.nscd.enable = false;
               system.nssModules = lib.mkForce [ ];
 
+              hardware.graphics = {
+                enable = true;
+                extraPackages = with pkgs; [
+                  intel-media-driver
+                  vpl-gpu-rt
+                  libvdpau-va-gl
+                ];
+              };
+
               services.jellyfin.enable = true;
               services.jellyfin.openFirewall = true;
             };
