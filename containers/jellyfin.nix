@@ -34,7 +34,6 @@
             "/config/jellyfin:/config"
             "/data/media:/media"
           ];
-          service.group_add = [ "226" ];
         };
       };
     };
