@@ -37,6 +37,7 @@
               services.jellyfin.enable = true;
               services.jellyfin.openFirewall = true;
               services.jellyfin.dataDir = "/config";
+              services.jellyfin.user = "root";
             };
           service.ports = [ "8096:8096" ];
           service.devices = [ "/dev/dri/renderD128:/dev/dri/renderD128" ];
