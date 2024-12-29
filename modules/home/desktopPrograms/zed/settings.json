@@ -1,48 +1,48 @@
 {
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "auto_update": false,
-  "project_panel": {
-    "dock": "right"
-  },
-  "terminal": {
-    "font_family": "FiraCode Nerd Font Mono",
-    "env": {
-      "TERM": "xterm-256color"
-    }
-  },
-  "features": {
-    "inline_completion_provider": "none"
-  },
-  "assistant": {
-    "enabled": false,
-    "version": "2"
-  },
-  "lsp": {
-    "rust-analyzer": {
-      "binary": {
-        "path": "/home/fedfer/.nix-profile/bin/rust-analyzer"
-      }
-    },
-    "nixd": {
-      "formatting": {
-        "command": ["nixfmt"]
-      },
-      "options": {
-        "home-manager": {
-          "expr": "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").homeConfigurations.fedfer.options"
-        },
-        "nixos": {
-          "expr": "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").nixosConfigurations.fedfer-main-laptop-nixos.options"
-        }
-      }
-    }
-  },
-  "languages": {
-    "Nix": {
-      "language_servers": ["nixd", "!nil"]
-    }
-  }
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	"auto_update": false,
+	"project_panel": {
+		"dock": "right"
+	},
+	"terminal": {
+		"font_family": "FiraCode Nerd Font Mono",
+		"env": {
+			"TERM": "xterm-256color"
+		}
+	},
+	"features": {
+		"inline_completion_provider": "none"
+	},
+	"assistant": {
+		"enabled": false,
+		"version": "2"
+	},
+	"lsp": {
+		"rust-analyzer": {
+			"binary": {
+				"path": "/home/fedfer/.nix-profile/bin/rust-analyzer"
+			}
+		},
+		"nixd": {
+			"formatting": {
+				"command": ["nixfmt"]
+			},
+			"options": {
+				"home-manager": {
+					"expr": "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").homeConfigurations.fedfer.options"
+				},
+				"nixos": {
+					"expr": "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").nixosConfigurations.fedfer-main-laptop-nixos.options"
+				}
+			}
+		}
+	},
+	"languages": {
+		"Nix": {
+			"language_servers": ["nixd", "!nil"]
+		}
+	}
 }

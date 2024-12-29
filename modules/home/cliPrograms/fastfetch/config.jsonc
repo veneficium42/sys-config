@@ -1,42 +1,42 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "padding": {
-            "top": 2
-        }
-    },
-    "modules": [
-        "title",
-        "separator",
-        "os",
-        "host",
-        "kernel",
-        "uptime",
-        "packages",
-        "shell",
-        "editor",
-        "wm",
-        "theme",
-        "font",
-        "terminal",
-        {
-            "type": "display"
-        },
-        {
-            "type": "cpu",
-            "showPeCoreCount": true
-        },
-        {
-            "type": "gpu",
-            "driverSpecific": true
-        },
-        "memory",
-        "physicalmemory",
-        "poweradapter",
-        "player",
-        "bluetooth",
-        "gamepad",
-        "break",
-        "colors"
-    ]
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+		"padding": {
+			"top": 2
+		}
+	},
+	"modules": [
+		"title",
+		"separator",
+		"os",
+		"host",
+		"kernel",
+		"uptime",
+		"packages",
+		"shell",
+		"editor",
+		"wm",
+		"theme",
+		"font",
+		"terminal",
+		{
+			"type": "display"
+		},
+		{
+			"type": "cpu",
+			"showPeCoreCount": true
+		},
+		{
+			"type": "gpu",
+			"driverSpecific": true
+		},
+		"memory",
+		"physicalmemory",
+		"poweradapter",
+		"player",
+		"bluetooth",
+		"gamepad",
+		"break",
+		"colors"
+	]
 }
