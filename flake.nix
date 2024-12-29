@@ -17,8 +17,13 @@
     };
 
     niri.url = "github:sodiboo/niri-flake";
+    niri.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
+
+    treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -30,6 +35,7 @@
       stylix,
       niri,
       nix-vscode-extensions,
+      treefmt-nix,
       ...
     }:
     let
@@ -84,6 +90,7 @@
           ];
         };
       };
-      formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter.x86_64-linux =
+        (treefmt-nix.lib.evalModule (pkgs [ ] "x86_64-linux") ./treefmt.nix).config.build.wrapper;
     };
 }
