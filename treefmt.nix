@@ -8,12 +8,4 @@
   programs.taplo.enable = true;
   programs.mdformat.enable = true;
   programs.shellcheck.enable = true;
-
-  settings.formatter = {
-    "kdlfmt" = {
-      command = "${pkgs.kdlfmt}/bin/kdlfmt";
-      options = [ "format" ];
-      includes = [ "*.kdl" ];
-    };
-  };
 }
