@@ -48,7 +48,7 @@
       docker.enable = lib.mkDefault false;
 
       dash.enable = lib.mkDefault true;
-      dash.symlink_sh = lib.mkDefault true;
+      dash.symlink-sh = lib.mkDefault true;
     };
 
     drivers = {
