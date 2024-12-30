@@ -26,6 +26,7 @@
     ./programs/tailscale.nix
     ./programs/powertop.nix
     ./programs/gnupg.nix
+    ./programs/dash.nix
 
     ./programs/tuigreet.nix
     ./programs/niri.nix
@@ -35,13 +36,20 @@
     users.fedfer.enable = lib.mkDefault false;
     users.veneficium.enable = lib.mkDefault false;
 
-    programs.docker.enable = lib.mkDefault false;
-    programs.tailscale.enable = lib.mkDefault false;
-    programs.powertop.enable = lib.mkDefault true;
-    programs.gnupg.enable = lib.mkDefault true;
-    programs.gnupg.ssh = lib.mkDefault true;
-    programs.niri.enable = lib.mkDefault false;
-    programs.tuigreet.enable = lib.mkDefault false;
+    programs = {
+      tailscale.enable = lib.mkDefault false;
+
+      powertop.enable = lib.mkDefault true;
+      gnupg.enable = lib.mkDefault true;
+      gnupg.ssh = lib.mkDefault true;
+
+      niri.enable = lib.mkDefault false;
+      tuigreet.enable = lib.mkDefault false;
+      docker.enable = lib.mkDefault false;
+
+      dash.enable = lib.mkDefault true;
+      dash.symlink_sh = lib.mkDefault true;
+    };
 
     drivers = {
       printer.M2020.enable = lib.mkDefault false;
