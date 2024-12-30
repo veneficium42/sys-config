@@ -63,7 +63,7 @@
   environment.systemPackages = with pkgs; [
     nano
     lshw
-    neofetch
+    fastfetch
     parted
     git-credential-manager
     pass-wayland
