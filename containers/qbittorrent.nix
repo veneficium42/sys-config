@@ -10,10 +10,10 @@
   };
 
   config = lib.mkIf config.settings.containers.qbittorrent.enable {
-    virtualisation.arion.projects.qbittorent = {
+    virtualisation.arion.projects.qbittorrent = {
       settings = {
         project.name = "qbittorrent";
-        services.qbittorent = {
+        services.qbittorrent = {
           service.useHostStore = true;
           service.image = "linuxserver/qbittorrent:latest";
           service.ports = [
