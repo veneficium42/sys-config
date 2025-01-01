@@ -22,6 +22,7 @@
     ./desktopPrograms/zed
     ./desktopPrograms/wezterm
     ./desktopPrograms/vscodium
+    ./desktopPrograms/kitty
   ];
 
   settings = {
@@ -38,6 +39,7 @@
       wezterm.enable = lib.mkDefault false;
       vscodium.enable = lib.mkDefault false;
       zed.enable = lib.mkDefault false;
+      kitty.enable = lib.mkDefault false;
 
       pass.enable = lib.mkDefault true;
       fastfetch.enable = lib.mkDefault true;
