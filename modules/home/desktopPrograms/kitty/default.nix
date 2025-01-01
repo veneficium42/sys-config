@@ -7,7 +7,7 @@
   config = lib.mkIf config.settings.programs.kitty.enable {
     programs.kitty = {
       enable = true;
-      enableFishIntegration = config.settings.shell.fish.enable;
+      shellIntegration.enableFishIntegration = config.settings.shell.fish.enable;
     };
   };
 }
