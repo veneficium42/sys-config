@@ -94,11 +94,13 @@
     kicad-small
     freecad-wayland
     resources
+    pmbootstrap
+    celluloid
+    fractal
+    yazi
     # logseq requires electron 27 which is EOL therefore temp disable until upstream pkg updates
     #logseq
   ];
-
-  nixpkgs.config.allowUnfree = true;
 
   home.stateVersion = "23.11"; # DO NOT CHANGE
   programs.home-manager.enable = true; # DO NOT CHANGE
