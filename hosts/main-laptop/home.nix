@@ -19,6 +19,7 @@
       amberol.enable = lib.mkForce true;
       wezterm.enable = lib.mkForce true;
       vscodium.enable = lib.mkForce true;
+      kitty.enable = lib.mkForce true;
 
       starship.enable = lib.mkForce true;
       helix.enable = lib.mkForce true;
@@ -63,6 +64,7 @@
       vscode.enable = true;
       fish.enable = true;
       wpaperd.enable = true;
+      kitty.enable = false;
     };
   };
 
