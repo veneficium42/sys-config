@@ -47,6 +47,12 @@
   stylix = {
     enable = true;
     autoEnable = true;
+    iconTheme = {
+      enable = true;
+      package = pkgs.marwaita-icons;
+      dark = "Marwaita-Dark-Purple";
+      light = "Marwaita-Light-Purple";
+    };
     targets = {
       gnome.enable = true;
       gtk.enable = true;
