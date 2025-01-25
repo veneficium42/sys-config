@@ -21,6 +21,7 @@
     ./services/switcheroo.nix
     ./services/pam.nix
     ./services/openssh.nix
+    ./services/caddy.nix
 
     ./programs/docker.nix
     ./programs/tailscale.nix
@@ -81,6 +82,7 @@
       };
       openssh.enable = lib.mkDefault false;
       openssh.usePAM = lib.mkDefault false;
+      caddy.enable = lib.mkDefault false;
     };
 
     gnome.enable = lib.mkDefault false;

@@ -26,6 +26,7 @@
       };
       openssh.enable = lib.mkForce true;
       openssh.usePAM = lib.mkForce true;
+      caddy.enable = lib.mkForce true;
     };
 
     containers.jellyfin.enable = lib.mkForce true;
