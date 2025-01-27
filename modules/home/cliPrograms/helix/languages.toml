@@ -1,0 +1,16 @@
+[[language]]
+name = "nix"
+scope = "source.nix"
+injection-regex = "nix"
+file-types = ["nix"]
+shebangs = []
+roots = ["flake.lock"]
+auto-format = true
+comment-token = "#"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["nil", "nixd"]
+indent = { tab-width = 2, unit = "  " }
+
+
+[language-server.nixd]
+command = "nixd"
