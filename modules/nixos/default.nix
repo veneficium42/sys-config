@@ -1,7 +1,9 @@
 { lib, ... }:
 {
   imports = [
-    ./locale.nix
+    ./system/boot.nix
+    ./system/nix.nix
+    ./system/locale.nix
 
     ./users/fedfer.nix
     ./users/veneficium.nix
@@ -34,6 +36,8 @@
   ];
 
   settings = {
+    system.boot.windows.enable = lib.mkDefault false;
+
     users.fedfer.enable = lib.mkDefault false;
     users.veneficium.enable = lib.mkDefault false;
 

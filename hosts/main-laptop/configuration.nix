@@ -65,6 +65,8 @@
   settings = {
     users.fedfer.enable = lib.mkForce true;
 
+    system.boot.windows.enable = lib.mkForce true;
+
     programs.docker.enable = lib.mkForce true;
     programs.tailscale.enable = lib.mkForce true;
     programs.gnupg.enable = lib.mkForce true;
@@ -95,19 +97,6 @@
   #enable wayland for electron programs
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.edk2-uefi-shell.enable = true;
-  boot.loader.systemd-boot.windows = {
-    "11" = {
-      title = "Windows 11 (gaming)";
-      efiDeviceHandle = "FS0";
-    };
-  };
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.loader.systemd-boot.configurationLimit = 10;
-
   #todo look further into networking options
   #could be pretty interesting
   networking.hostName = "fedfer-main-laptop-nixos";
@@ -137,9 +126,6 @@
   #todo modularize!
   programs.xwayland.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = with pkgs; [
     nano
     lshw
@@ -148,12 +134,5 @@
     gcc
   ];
 
-  #enable flakes
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
   system.stateVersion = "24.05"; # DO NOT CHANGE THIS!
-
 }
