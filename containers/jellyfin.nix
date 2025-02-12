@@ -38,6 +38,20 @@
               services.jellyfin.openFirewall = true;
               services.jellyfin.dataDir = "/config";
               services.jellyfin.user = "root";
+
+              services.mopidy.enable = true;
+              services.mopidy.dataDir = "/config/mopidy";
+              services.mopidy.extensionPackages = with pkgs; [
+                mopidy-mpd
+                mopidy-jellyfin
+              ];
+              services.mopidy.configuration = ''
+                [mpd]
+                enabled = true
+                hostname = 0.0.0.0
+                port = 6600
+                connection_timeout = 300
+              '';
             };
           service.ports = [ "8096:8096" ];
           service.devices = [ "/dev/dri/renderD128:/dev/dri/renderD128" ];
