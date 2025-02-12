@@ -48,6 +48,7 @@
               nixpkgs.overlays = [
                 nix-vscode-extensions.overlays.default
                 niri.overlays.niri
+                (import ./overlays/marwaita-icons.nix)
               ];
             }
             ./hosts/main-laptop/configuration.nix
