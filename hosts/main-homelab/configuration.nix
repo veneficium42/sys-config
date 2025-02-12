@@ -33,10 +33,6 @@
     containers.lidarr.enable = lib.mkForce true;
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "veneficium-main-homelab-nixos";
 
   networking.networkmanager.enable = true;
