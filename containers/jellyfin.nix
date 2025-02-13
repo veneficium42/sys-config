@@ -53,7 +53,7 @@
                 connection_timeout = 300
               '';
 
-              systemd.services.mopidy.serviceConfig.User = "root";
+              systemd.services.mopidy.serviceConfig.User = lib.mkForce "root";
             };
           service.ports = [ "8096:8096" ];
           service.devices = [ "/dev/dri/renderD128:/dev/dri/renderD128" ];
