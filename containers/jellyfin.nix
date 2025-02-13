@@ -52,6 +52,8 @@
                 port = 6600
                 connection_timeout = 300
               '';
+
+              systemd.services.mopidy.serviceConfig.User = "root";
             };
           service.ports = [ "8096:8096" ];
           service.devices = [ "/dev/dri/renderD128:/dev/dri/renderD128" ];
