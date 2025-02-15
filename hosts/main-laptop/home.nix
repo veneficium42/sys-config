@@ -65,8 +65,6 @@
   home.packages = with pkgs; [
     prismlauncher
     foliate
-    biome
-    python3
     impression
     chatterino2
     qbittorrent
@@ -74,7 +72,6 @@
     nixpkgs-fmt
     nixfmt-rfc-style
     powertop
-    git-credential-manager
     vesktop
     libreoffice
     valent
@@ -86,8 +83,11 @@
     celluloid
     fractal
     yazi
-    # logseq requires electron 27 which is EOL therefore temp disable until upstream pkg updates
-    #logseq
+    nautilus
+    tuba
+    eza
+    bat
+    gitui
   ];
 
   home.stateVersion = "23.11"; # DO NOT CHANGE
