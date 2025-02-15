@@ -20,6 +20,7 @@
       wezterm.enable = lib.mkForce true;
       vscodium.enable = lib.mkForce true;
       kitty.enable = lib.mkForce true;
+      ghostty.enable = true;
 
       starship.enable = lib.mkForce true;
       helix.enable = lib.mkForce true;
