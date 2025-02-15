@@ -31,19 +31,6 @@
 
   services.mpris-proxy.enable = true;
 
-  programs.gnome-shell = {
-    enable = true;
-    extensions = [
-      { package = pkgs.gnomeExtensions.valent; }
-      { package = pkgs.gnomeExtensions.blur-my-shell; }
-      { package = pkgs.gnomeExtensions.dash-to-dock; }
-      { package = pkgs.gnomeExtensions.tray-icons-reloaded; }
-      { package = pkgs.gnomeExtensions.native-window-placement; }
-      { package = pkgs.gnomeExtensions.system-monitor; }
-      { package = pkgs.gnomeExtensions.highlight-focus; }
-    ];
-  };
-
   stylix = {
     enable = true;
     autoEnable = true;
