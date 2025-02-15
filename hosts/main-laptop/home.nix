@@ -17,7 +17,6 @@
     programs = {
       firefox.enable = lib.mkForce true;
       amberol.enable = lib.mkForce true;
-      wezterm.enable = lib.mkForce true;
       vscodium.enable = lib.mkForce true;
       kitty.enable = lib.mkForce true;
       ghostty.enable = true;
