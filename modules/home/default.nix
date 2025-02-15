@@ -10,6 +10,7 @@
     ./cliPrograms/pass.nix
     ./cliPrograms/hyfetch.nix
     ./cliPrograms/git.nix
+    ./cliPrograms/bat.nix
 
     ./cliPrograms/starship
     ./cliPrograms/fastfetch
@@ -46,6 +47,7 @@
       pass.enable = lib.mkDefault true;
       fastfetch.enable = lib.mkDefault true;
       git.enable = lib.mkDefault true;
+      bat.enable = lib.mkDefault true;
       hyfetch.enable = lib.mkDefault false;
       starship.enable = lib.mkDefault false;
       helix.enable = lib.mkDefault false;
