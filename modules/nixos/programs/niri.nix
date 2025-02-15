@@ -16,6 +16,8 @@
 
     security.pam.services.swaylock = { };
 
+    gtk.iconCache.enable = true;
+
     environment.systemPackages = with pkgs; [
       swayosd
       fuzzel
