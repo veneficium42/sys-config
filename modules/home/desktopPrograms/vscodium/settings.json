@@ -5,21 +5,23 @@
 	"workbench.productIconTheme": "material-product-icons",
 	"editor.fontLigatures": true,
 	"terminal.integrated.fontLigatures": true,
-
 	"workbench.sideBar.location": "right",
 	"workbench.startupEditor": "welcomePageInEmptyWorkbench",
 	"editor.formatOnSave": true,
 	"C_Cpp.clang_format_fallbackStyle": "LLVM",
 	"nix.enableLanguageServer": true,
 	"nix.serverPath": "nixd",
+	"nix.formatterPath": [
+		"nix",
+		"fmt",
+		"--",
+		"--"
+	],
 	"nix.serverSettings": {
 		"nixd": {
-			"formatting": {
-				"command": ["nixfmt"]
-			},
 			"options": {
 				"home-manager": {
-					"expr": "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").homeConfigurations.fedfer.options"
+					"expr": "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").nixosConfigurations.fedfer-main-laptop-nixos.options.home-manager.users.type.getSubOptions []"
 				},
 				"nixos": {
 					"expr": "(builtins.getFlake \"/home/fedfer/Documents/sys-config\").nixosConfigurations.fedfer-main-laptop-nixos.options"

@@ -11,7 +11,5 @@
 
   config = lib.mkIf config.settings.services.caddy.enable {
     services.caddy.enable = true;
-    environment.systemPackages = [ pkgs.caddy ];
-    #services.caddy.setting = { };
   };
 }

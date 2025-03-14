@@ -10,6 +10,7 @@
     ./cliPrograms/pass.nix
     ./cliPrograms/hyfetch.nix
     ./cliPrograms/git.nix
+    ./cliPrograms/bat.nix
 
     ./cliPrograms/starship
     ./cliPrograms/fastfetch
@@ -23,6 +24,7 @@
     ./desktopPrograms/wezterm
     ./desktopPrograms/vscodium
     ./desktopPrograms/kitty
+    ./desktopPrograms/ghostty
   ];
 
   settings = {
@@ -40,10 +42,12 @@
       vscodium.enable = lib.mkDefault false;
       zed.enable = lib.mkDefault false;
       kitty.enable = lib.mkDefault false;
+      ghostty.enable = lib.mkDefault false;
 
       pass.enable = lib.mkDefault true;
       fastfetch.enable = lib.mkDefault true;
       git.enable = lib.mkDefault true;
+      bat.enable = lib.mkDefault true;
       hyfetch.enable = lib.mkDefault false;
       starship.enable = lib.mkDefault false;
       helix.enable = lib.mkDefault false;

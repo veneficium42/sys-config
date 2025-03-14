@@ -2,9 +2,22 @@
 	"layer": "top",
 	"position": "top",
 	"spacing": 10,
-	"modules-left": ["niri/workspaces"],
-	"modules-center": ["clock#1", "clock#2", "clock#3"],
-	"modules-right": ["pulseaudio", "memory", "cpu", "battery", "disk", "tray"],
+	"modules-left": [
+		"niri/workspaces"
+	],
+	"modules-center": [
+		"clock#1",
+		"clock#2",
+		"clock#3"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"memory",
+		"cpu",
+		"battery",
+		"disk",
+		"tray"
+	],
 	"sway/workspaces": {
 		"disable-scroll": true,
 		"format": "{name}"
@@ -27,7 +40,10 @@
 		"format-muted": "",
 		"format-icons": {
 			"headphones": "",
-			"default": ["", ""]
+			"default": [
+				"",
+				""
+			]
 		},
 		"scroll-step": 5,
 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -44,12 +60,18 @@
 	},
 	"battery": {
 		"states": {
-			"good": 95,
+			"good": 50,
 			"warning": 30,
 			"critical": 15
 		},
 		"format": "{icon}    {capacity}%",
-		"format-icons": ["", "", "", "", ""]
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
 	},
 	"disk": {
 		"interval": 5,

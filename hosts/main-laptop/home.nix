@@ -1,6 +1,5 @@
 {
   lib,
-  inputs,
   pkgs,
   ...
 }:
@@ -17,9 +16,9 @@
     programs = {
       firefox.enable = lib.mkForce true;
       amberol.enable = lib.mkForce true;
-      wezterm.enable = lib.mkForce true;
       vscodium.enable = lib.mkForce true;
       kitty.enable = lib.mkForce true;
+      ghostty.enable = true;
 
       starship.enable = lib.mkForce true;
       helix.enable = lib.mkForce true;
@@ -31,19 +30,6 @@
   #todo: EditorConfig support ( https://editorconfig.org )
 
   services.mpris-proxy.enable = true;
-
-  programs.gnome-shell = {
-    enable = true;
-    extensions = [
-      { package = pkgs.gnomeExtensions.valent; }
-      { package = pkgs.gnomeExtensions.blur-my-shell; }
-      { package = pkgs.gnomeExtensions.dash-to-dock; }
-      { package = pkgs.gnomeExtensions.tray-icons-reloaded; }
-      { package = pkgs.gnomeExtensions.native-window-placement; }
-      { package = pkgs.gnomeExtensions.system-monitor; }
-      { package = pkgs.gnomeExtensions.highlight-focus; }
-    ];
-  };
 
   stylix = {
     enable = true;
@@ -79,8 +65,6 @@
   home.packages = with pkgs; [
     prismlauncher
     foliate
-    biome
-    python3
     impression
     chatterino2
     qbittorrent
@@ -88,7 +72,6 @@
     nixpkgs-fmt
     nixfmt-rfc-style
     powertop
-    git-credential-manager
     vesktop
     libreoffice
     valent
@@ -100,8 +83,11 @@
     celluloid
     fractal
     yazi
-    # logseq requires electron 27 which is EOL therefore temp disable until upstream pkg updates
-    #logseq
+    nautilus
+    tuba
+    eza
+    bat
+    gitui
   ];
 
   home.stateVersion = "23.11"; # DO NOT CHANGE

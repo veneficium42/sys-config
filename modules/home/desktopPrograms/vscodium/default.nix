@@ -36,7 +36,6 @@
         ])
         (with pkgs.open-vsx; [
           jeanp413.open-remote-ssh
-          antfu.unocss
           bierner.markdown-preview-github-styles
           sumneko.lua
         ])
