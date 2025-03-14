@@ -18,11 +18,11 @@
     programs.vscode = {
       enable = true;
       package = pkgs.vscodium;
-      enableUpdateCheck = false;
-      enableExtensionUpdateCheck = false;
+      profiles.default.enableUpdateCheck = false;
+      profiles.default.enableExtensionUpdateCheck = false;
       mutableExtensionsDir = false;
 
-      extensions = lib.mkMerge [
+      profiles.default.extensions = lib.mkMerge [
         (with pkgs.vscode-marketplace; [
           ms-vscode.live-server
           mhutchie.git-graph
@@ -53,7 +53,7 @@
         ))
       ];
 
-      userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
+      profiles.default.userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
     };
   };
 }
