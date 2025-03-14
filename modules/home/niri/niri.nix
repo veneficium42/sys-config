@@ -31,6 +31,6 @@
     ];
     style = builtins.readFile ./waybar.css;
   };
-  programs.wpaperd.enable = true;
+  services.wpaperd.enable = true;
   programs.niri.config = builtins.readFile ./config.kdl;
 }
