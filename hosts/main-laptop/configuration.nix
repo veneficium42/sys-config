@@ -4,8 +4,6 @@
     ./hardware-configuration.nix
     ../../modules/nixos
   ];
-
-  qt.style = "adwaita";
   services.blueman.enable = true;
 
   virtualisation.libvirtd.enable = true;
@@ -29,6 +27,7 @@
     cursor = {
       package = pkgs.catppuccin-cursors.macchiatoMauve;
       name = "catppuccin-macchiato-mauve-cursors";
+      size = 25;
     };
     fonts = {
       serif = {

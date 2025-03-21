@@ -44,10 +44,12 @@
       gnome.enable = true;
       gtk.enable = true;
       firefox.enable = true;
+      firefox.profileNames = [ "default" ];
       vesktop.enable = true;
       wezterm.enable = true;
       helix.enable = true;
       vscode.enable = true;
+      vscode.profileNames = [ "default" ];
       fish.enable = true;
       wpaperd.enable = true;
       kitty.enable = false;
@@ -89,6 +91,9 @@
     eza
     bat
     gitui
+    wleave
+    wl-gammarelay-rs
+    wl-gammarelay-applet
   ];
 
   home.stateVersion = "23.11"; # DO NOT CHANGE
