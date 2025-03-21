@@ -28,10 +28,13 @@
       caddy.enable = lib.mkForce true;
     };
 
-    containers.jellyfin.enable = lib.mkForce true;
-    containers.qbittorrent.enable = lib.mkForce true;
-    containers.lidarr.enable = lib.mkForce true;
-    containers.homarr.enable = lib.mkForce true;
+    containers = {
+      jellyfin.enable = lib.mkForce true;
+      qbittorrent.enable = lib.mkForce true;
+      lidarr.enable = lib.mkForce true;
+      homarr.enable = lib.mkForce true;
+      prowlarr.enable = lib.mkForce true;
+    };
   };
 
   networking.hostName = "veneficium-main-homelab-nixos";
