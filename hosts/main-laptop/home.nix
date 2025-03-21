@@ -51,6 +51,7 @@
       fish.enable = true;
       wpaperd.enable = true;
       kitty.enable = false;
+      waybar.enable = false;
     };
   };
 
