@@ -5,6 +5,7 @@
     ./qbittorrent.nix
     ./prowlarr.nix
     ./lidarr.nix
+    ./wg-easy.nix
   ];
 
   settings.containers = {
@@ -12,6 +13,7 @@
     qbittorrent.enable = lib.mkDefault false;
     lidarr.enable = lib.mkDefault false;
     prowlarr.enable = lib.mkDefault false;
+    wg-easy.enable = lib.mkDefault false;
   };
 
 }
