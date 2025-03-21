@@ -25,6 +25,8 @@
               services.nscd.enable = false;
               system.nssModules = lib.mkForce [ ];
 
+              systemd.oomd.enable = false;
+
               services.prowlarr.enable = true;
               services.prowlarr.openFirewall = true;
             };
