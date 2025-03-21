@@ -31,6 +31,7 @@
     containers.jellyfin.enable = lib.mkForce true;
     containers.qbittorrent.enable = lib.mkForce true;
     containers.lidarr.enable = lib.mkForce true;
+    containers.homarr.enable = lib.mkForce true;
   };
 
   networking.hostName = "veneficium-main-homelab-nixos";

@@ -6,6 +6,7 @@
     ./prowlarr.nix
     ./lidarr.nix
     ./wg-easy.nix
+    ./homarr.nix
   ];
 
   settings.containers = {
@@ -14,6 +15,7 @@
     lidarr.enable = lib.mkDefault false;
     prowlarr.enable = lib.mkDefault false;
     wg-easy.enable = lib.mkDefault false;
+    homarr.enable = lib.mkDefault false;
   };
 
 }
