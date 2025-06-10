@@ -7,6 +7,7 @@
     ./lidarr.nix
     ./wg-easy.nix
     ./homarr.nix
+    ./minecraft_bedrock.nix
   ];
 
   settings.containers = {
@@ -16,6 +17,7 @@
     prowlarr.enable = lib.mkDefault false;
     wg-easy.enable = lib.mkDefault false;
     homarr.enable = lib.mkDefault false;
+    minecraft.enable = lib.mkDefault true;
   };
 
 }
