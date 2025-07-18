@@ -2,7 +2,6 @@
 {
   home.packages = with pkgs; [
     swayosd
-    fuzzel
     wl-clipboard
     wayland-utils
     libsecret

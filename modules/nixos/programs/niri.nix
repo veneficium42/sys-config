@@ -20,8 +20,6 @@
 
     environment.systemPackages = with pkgs; [
       swayosd
-      fuzzel
-      alacritty
       wl-clipboard
       wayland-utils
       libsecret
