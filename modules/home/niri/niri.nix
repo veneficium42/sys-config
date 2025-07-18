@@ -17,7 +17,26 @@
 
   services.mako = {
     enable = true;
-    extraConfig = builtins.readFile ./mako.conf;
+    settings = {
+      sort = "+time";
+      on-button-left = "invoke-default-action";
+      on-button-middle = "dismiss-group";
+      on-button-right = "dismiss";
+      on-touch = "invoke-default-action";
+      height = 99;
+      width = 299;
+      margin = 0;
+      padding = 10;
+      border-size = 1;
+      border-radius = 1;
+      icons = 1;
+      layer = "top";
+      anchor = "bottom-right";
+      markup = 1;
+      actions = 1;
+      text-alignment = "center";
+      default-timeout = 10000;
+    };
   };
   services.swayosd = {
     enable = true;
@@ -30,6 +49,9 @@
     ];
     style = builtins.readFile ./waybar.css;
   };
+
+  programs.fuzzel.enable = true;
+
   services.wpaperd.enable = true;
   programs.niri.config = builtins.readFile ./config.kdl;
 }

@@ -24,6 +24,9 @@
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+
+    helix.url = "github:helix-editor/helix";
+    helix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -36,6 +39,7 @@
       niri,
       nix-vscode-extensions,
       treefmt-nix,
+      helix,
       ...
     }:
     {
@@ -47,6 +51,7 @@
             {
               nixpkgs.overlays = [
                 nix-vscode-extensions.overlays.default
+                helix.overlays.default
                 niri.overlays.niri
               ];
             }
