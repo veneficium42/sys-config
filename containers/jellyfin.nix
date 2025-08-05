@@ -25,8 +25,8 @@
               services.nscd.enable = false;
               system.nssModules = lib.mkForce [ ];
 
-	      systemd.oomd.enable = false;
-		
+              systemd.oomd.enable = false;
+
               hardware.graphics = {
                 enable = true;
                 extraPackages = with pkgs; [
@@ -40,20 +40,12 @@
               services.jellyfin.openFirewall = true;
               services.jellyfin.dataDir = "/config";
               services.jellyfin.user = "root";
-
-              services.mopidy.enable = true;
-              services.mopidy.dataDir = "/config/mopidy";
-              services.mopidy.extensionPackages = with pkgs; [
-                mopidy-mpd
-                mopidy-jellyfin
-		mopidy-muse
-              ];
-              services.mopidy.configuration = builtins.readFile ./mopidy.conf;
-
-              systemd.services.mopidy.serviceConfig.User = lib.mkForce "root";
-	      systemd.services.mopidy.after = [ "jellyfin.service" ];
             };
-          service.ports = [ "8096:8096" "6600:6600" "6680:6680" ];
+          service.ports = [
+            "8096:8096"
+            "6600:6600"
+            "6680:6680"
+          ];
           service.devices = [ "/dev/dri/renderD128:/dev/dri/renderD128" ];
           service.volumes = [
             "/config/jellyfin:/config"
