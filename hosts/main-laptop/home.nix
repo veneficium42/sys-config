@@ -27,8 +27,6 @@
     };
   };
 
-  #todo: EditorConfig support ( https://editorconfig.org )
-
   services.mpris-proxy.enable = true;
 
   stylix = {

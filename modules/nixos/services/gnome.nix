@@ -9,7 +9,6 @@
     enable = lib.mkEnableOption "enable gnome de";
   };
 
-  #todo make this more configurable
   config = lib.mkIf config.settings.gnome.enable {
     services.xserver = {
       enable = true;
