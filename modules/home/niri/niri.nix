@@ -1,4 +1,9 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 {
   home.packages = with pkgs; [
     swayosd
@@ -55,6 +60,12 @@
   services.wpaperd.enable = true;
   # programs.niri.config = builtins.readFile ./config.kdl;
   programs.niri.settings = {
+
+    cursor = lib.mkIf (config.stylix.cursor != null) {
+      size = config.stylix.cursor.size;
+      theme = config.stylix.cursor.name;
+    };
+
     prefer-no-csd = true;
     spawn-at-startup = [
       { command = [ "wpaperd" ]; }
