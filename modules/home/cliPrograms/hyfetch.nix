@@ -7,7 +7,14 @@
   config = lib.mkIf config.settings.programs.hyfetch.enable {
     programs.hyfetch = {
       enable = true;
-      #todo add hyfetch config
+      settings = {
+        preset = "nonbinary";
+        lightness = 0.64;
+        color_align = {
+          mode = "horizontal";
+        };
+        backend = "fastfetch";
+      };
     };
   };
 }
