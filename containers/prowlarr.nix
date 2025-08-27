@@ -29,6 +29,14 @@
 
               services.prowlarr.enable = true;
               services.prowlarr.openFirewall = true;
+              systemd.services.prowlarr.serviceConfig.DynamicUser = lib.mkForce false;
+              systemd.services.prowlarr.serviceConfig.User = "root";
+
+              services.flaresolverr.enable = true;
+              services.flaresolverr.openFirewall = true;
+              systemd.services.flaresolverr.serviceConfig.DynamicUser = lib.mkForce false;
+              systemd.services.flaresolverr.serviceConfig.User = "root";
+
             };
           service.ports = [ "9696:9696" ];
           service.volumes = [
